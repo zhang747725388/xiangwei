@@ -5,7 +5,7 @@
 <h2>Tool Versions:</h2>
 IDE-Version: ¦ÌVision V5.14.0.0
 Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: ss Microsoft, Microsoft, LIC=LJWEV-PRWH0-TJ56H-W2LS9-K2DWV-B2L19
+License Information: d Microsoft, Microsoft, LIC=FQQQD-8F35T-XCLJ0-BEHT1-BPK19-K7ZG0
  
 Tool Versions:
 Toolchain:       MDK-ARM Professional  Version: 5.14.0.0
@@ -21,16 +21,116 @@ Target DLL:      Segger\JL2CM3.dll V2.99.13.0
 Dialog DLL:      TCM.DLL V1.14.4.0
  
 <h2>Project:</h2>
-H:\xiangwei\xiangwei\mart\Project\ATC30.uvprojx
-Project File Date:  05/17/2016
+H:\gitprojecct\xiangwei\Project\ATC30.uvprojx
+Project File Date:  05/18/2016
 
 <h2>Output:</h2>
 Build target 'mart'
+assembling startup_stm32f10x_hd.s...
+compiling core_cm3.c...
+compiling system_stm32f10x.c...
+compiling misc.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_iwdg.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_usart.c...
+compiling stm32f10x_tim.c...
+compiling stm32f10x_flash.c...
+compiling stm32f10x_pwr.c...
+compiling stm32f10x_adc.c...
+compiling stm32f10x_rtc.c...
+compiling stm32f10x_bkp.c...
+compiling rdelay.c...
+compiling rtime.c...
+compiling rstring.c...
+..\Kernel\rstring.c(316): warning:  #186-D: pointless comparison of unsigned integer with zero
+                            temp=(num<0)?(-num):num;
+..\Kernel\rstring.c(324): warning:  #186-D: pointless comparison of unsigned integer with zero
+                            while((--i)>=0)
+..\Kernel\rstring.c(350): warning:  #1-D: last line of file ends without a newline
+  }
+..\Kernel\rstring.c: 3 warnings, 0 errors
+compiling rsystem.c...
+..\BSP\GPIO.h(3): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Kernel\rsystem.c: 1 warning, 0 errors
+compiling uart.c...
+..\BSP\GPIO.h(3): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Basic\uart.c: 1 warning, 0 errors
+compiling nvic.c...
+..\BSP\GPIO.h(3): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Basic\nvic.c: 1 warning, 0 errors
+compiling bsp.c...
+..\BSP\GPIO.h(3): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\bsp.c: 1 warning, 0 errors
+compiling systest.c...
+..\BSP\GPIO.h(3): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\uart\systest.c: 1 warning, 0 errors
+compiling 5110LCD.c...
+..\BSP\GPIO.h(3): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\5110LCD.c: 1 warning, 0 errors
+compiling stmflash.c...
+..\BSP\GPIO.h(3): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\stmflash.c: 1 warning, 0 errors
+compiling key.c...
+..\BSP\GPIO.h(3): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\Key\key.c: 1 warning, 0 errors
+compiling 74hc595.c...
+..\BSP\GPIO.h(3): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\74hc595.c(220): warning:  #1-D: last line of file ends without a newline
+  }
+..\BSP\74hc595.c: 2 warnings, 0 errors
+compiling remote.c...
+..\BSP\GPIO.h(3): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\remote.c(339): warning:  #1-D: last line of file ends without a newline
+  }
+..\BSP\remote.c(263): warning:  #177-D: variable "remotecode" was declared but never referenced
+    Remotecode remotecode;
+..\BSP\remote.c: 3 warnings, 0 errors
+compiling GPIO.c...
+..\BSP\GPIO.h(3): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\GPIO.c(41): warning:  #1-D: last line of file ends without a newline
+  }
+..\BSP\GPIO.c: 2 warnings, 0 errors
+compiling iwdg.c...
+compiling led.c...
+..\BSP\GPIO.h(3): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\BSP\led.c: 1 warning, 0 errors
+compiling task.c...
+..\BSP\GPIO.h(3): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\App\Task\task.c: 1 warning, 0 errors
+compiling LCD.c...
+..\BSP\GPIO.h(3): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\App\LCD.c: 1 warning, 0 errors
+compiling MODE.c...
+compiling stm32f10x_it.c...
+..\BSP\GPIO.h(3): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\App\stm32f10x_it.c: 1 warning, 0 errors
+compiling main.c...
+..\BSP\GPIO.h(3): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\App\main.c: 1 warning, 0 errors
+linking...
+Program Size: Code=4436 RO-data=2044 RW-data=108 ZI-data=8492  
 After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
-"..\Outputs\ATC30GG.axf" - 0 Error(s), 0 Warning(s).
+"..\Outputs\ATC30GG.axf" - 0 Error(s), 23 Warning(s).
 
 <h2>Collection of Component include folders:</h2>
-  H:\xiangwei\xiangwei\mart\Project\RTE
+  H:\gitprojecct\xiangwei\Project\RTE
   C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include
 
 <h2>Collection of Component Files used:</h2>
