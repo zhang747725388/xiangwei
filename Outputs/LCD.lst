@@ -26839,13 +26839,13 @@ N
 N  GPIO_Configuration_LCD();
 N 	LCD_Init();
 N	LCD_Clear();
-N	LCD_Write_cn(15, 1, 0);
-N 	LCD_Write_cn(30, 1, 1);
-N	LCD_Write_cn(45, 1, 2);
-N	LCD_Write_cn(60, 1, 3);
-N 	LCD_Write_cn(25, 3, 4);
-N 	LCD_Write_cn(40, 3, 5);
-N 	LCD_Write_cn(55, 3, 6);
+N//	LCD_Write_cn(15, 1, 0);
+N// 	LCD_Write_cn(30, 1, 1);
+N//	LCD_Write_cn(45, 1, 2);
+N//	LCD_Write_cn(60, 1, 3);
+N// 	LCD_Write_cn(25, 3, 4);
+N// 	LCD_Write_cn(40, 3, 5);
+N// 	LCD_Write_cn(55, 3, 6);
 N //LCD_WriteString_en(0,0,"Hangzhoudianzi");
 N
 N 
@@ -26854,7 +26854,8 @@ N
 N void LcdDislayTask(void){
 N
 N
-N	
+N	  
+N	 
 N
 N}
 N

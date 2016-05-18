@@ -26860,13 +26860,7 @@ N	if(Timer_GetReached(&CheckVolTim) == bTRUE){
 N
 N		Voltage_AD = ADC_GetValue();
 N		Voltage = (double) Voltage_AD / 4096.0 * 3.3 * 7.2;	
-N
-N		if( (Voltage > 11) && (Voltage < 15) ){
-N			VoltageSta = Vol_OK;			
-N		}else{
-N			VoltageSta = Vol_Error;		
-N		}
-N
+N     LCD_WriteNumber(15, 1, Voltage_AD);
 N		Timer_Set(&CheckVolTim, VOLATAGE_SAMPLE_INTERVEL);	
 X		Timer_Set(&CheckVolTim, (1000));	
 N	

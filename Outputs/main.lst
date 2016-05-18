@@ -26828,7 +26828,6 @@ N	{
 N      
 N	    MainKeytask();
 N	    Getdatatask();
-N 	    
 N		  VoltageSampleTask();
 N		
 N		

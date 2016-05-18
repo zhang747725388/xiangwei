@@ -39,13 +39,7 @@ void VoltageSampleTask(void)
 
 		Voltage_AD = ADC_GetValue();
 		Voltage = (double) Voltage_AD / 4096.0 * 3.3 * 7.2;	
-
-		if( (Voltage > 11) && (Voltage < 15) ){
-			VoltageSta = Vol_OK;			
-		}else{
-			VoltageSta = Vol_Error;		
-		}
-
+     LCD_WriteNumber(15, 1, Voltage_AD);
 		Timer_Set(&CheckVolTim, VOLATAGE_SAMPLE_INTERVEL);	
 	
 	}

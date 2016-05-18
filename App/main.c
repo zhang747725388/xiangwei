@@ -8,7 +8,6 @@ int main(void)
       
 	    MainKeytask();
 	    Getdatatask();
- 	    
 		  VoltageSampleTask();
 		
 		
