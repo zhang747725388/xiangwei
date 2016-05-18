@@ -38,3 +38,5 @@
 ..\outputs\5110lcd.o: ..\BSP\Basic\nvic.h
 ..\outputs\5110lcd.o: ..\BSP\GPIO.h
 ..\outputs\5110lcd.o: ..\BSP\stmflash.h
+..\outputs\5110lcd.o: ..\BSP\ADC\adc.h
+..\outputs\5110lcd.o: ..\App\Voltage\voltage.h

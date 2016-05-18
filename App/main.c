@@ -8,7 +8,10 @@ int main(void)
       
 	    MainKeytask();
 	    Getdatatask();
- 	    LcdDislayTask();
+ 	    
+		  VoltageSampleTask();
+		
+		
 	}
 
 }

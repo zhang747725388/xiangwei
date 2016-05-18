@@ -39,4 +39,6 @@
 ..\outputs\stm32f10x_it.o: ..\BSP\Basic\nvic.h
 ..\outputs\stm32f10x_it.o: ..\BSP\GPIO.h
 ..\outputs\stm32f10x_it.o: ..\BSP\stmflash.h
+..\outputs\stm32f10x_it.o: ..\BSP\ADC\adc.h
+..\outputs\stm32f10x_it.o: ..\App\Voltage\voltage.h
 ..\outputs\stm32f10x_it.o: ..\App\ATC30\atc30.h

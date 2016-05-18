@@ -31,7 +31,8 @@ Note    :
 #include "GPIO.h"
 #include "stmflash.h"
 #include "systest.h"
-
+#include "adc.h"
+#include "voltage.h"
 R_EXT INT32U 	r_nIntNest;
 
 /*--- Function Declaration --------------------------------------------------*/

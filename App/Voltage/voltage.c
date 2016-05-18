@@ -3,8 +3,7 @@
 
 /*--- File Includes ------------------------------------------------------*/
 #include "rsystem.h"
-#include "bsp.h"
-#include "voltage.h"
+ 
 
 /*--- Macro Defination ---------------------------------------------------*/     
 #define VOLATAGE_SAMPLE_INTERVEL (1000)		  // 电压采集的时间间隔(ms)			  (1000)

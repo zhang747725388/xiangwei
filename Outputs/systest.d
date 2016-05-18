@@ -37,4 +37,6 @@
 ..\outputs\systest.o: ..\BSP\Basic\nvic.h
 ..\outputs\systest.o: ..\BSP\GPIO.h
 ..\outputs\systest.o: ..\BSP\stmflash.h
+..\outputs\systest.o: ..\BSP\ADC\adc.h
+..\outputs\systest.o: ..\App\Voltage\voltage.h
 ..\outputs\systest.o: ..\BSP\Basic\uart.h

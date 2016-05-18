@@ -5,7 +5,7 @@
                           AREA ||i.NVIC_Configuration||, CODE, READONLY, ALIGN=1
 
                   NVIC_Configuration PROC
-;;;43     #endif
+;;;44     #endif
 ;;;2      void NVIC_Configuration(void)
 000000  b508              PUSH     {r3,lr}
 ;;;3      {

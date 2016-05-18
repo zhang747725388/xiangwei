@@ -1,6 +1,5 @@
 
-/*   ATC20终端-硬件驱动程序汇总   */
-
+ 
 /*--- File Includes ------------------------------------------------------*/
 #include "rsystem.h"
 /*--- Macro Defination ---------------------------------------------------*/
@@ -26,8 +25,7 @@ void BSP_Init(void)
   SysTest_Bsp_Init();
 	LcdMainInit();
 	Led_Init();
- 
- 
-
+  ADC_InitChannel();
+	VoltageSampleInit();// ADC
 }
  

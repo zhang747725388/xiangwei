@@ -5,29 +5,30 @@
                           AREA ||i.BSP_Init||, CODE, READONLY, ALIGN=1
 
                   BSP_Init PROC
-;;;17     
-;;;18     void BSP_Init(void)
+;;;16     
+;;;17     void BSP_Init(void)
 000000  b510              PUSH     {r4,lr}
-;;;19     {
-;;;20     /*************** System Init *********************/
-;;;21     	RInit();
+;;;18     {
+;;;19     /*************** System Init *********************/
+;;;20     	RInit();
 000002  f7fffffe          BL       RInit
-;;;22     /**************** NVIC Init **********************/
-;;;23     	NVIC_Configuration();
+;;;21     /**************** NVIC Init **********************/
+;;;22     	NVIC_Configuration();
 000006  f7fffffe          BL       NVIC_Configuration
-;;;24     /***************** Bsp Init **********************/
-;;;25      
-;;;26       SysTest_Bsp_Init();
+;;;23     /***************** Bsp Init **********************/
+;;;24      
+;;;25       SysTest_Bsp_Init();
 00000a  f7fffffe          BL       SysTest_Bsp_Init
-;;;27     	LcdMainInit();
+;;;26     	LcdMainInit();
 00000e  f7fffffe          BL       LcdMainInit
-;;;28     	Led_Init();
+;;;27     	Led_Init();
 000012  f7fffffe          BL       Led_Init
-;;;29      
-;;;30      
-;;;31     
-;;;32     }
-000016  bd10              POP      {r4,pc}
-;;;33      
+;;;28       ADC_InitChannel();
+000016  f7fffffe          BL       ADC_InitChannel
+;;;29     	VoltageSampleInit();// ADC
+00001a  f7fffffe          BL       VoltageSampleInit
+;;;30     }
+00001e  bd10              POP      {r4,pc}
+;;;31      
                           ENDP
 

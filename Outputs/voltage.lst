@@ -14,10 +14,8 @@ NData    : 2013/01/16
 NVersion : V1.0(alpha)
 NNote    : 
 N-----------------------------------------------------------------------------*/
-N
 N#ifndef __RSYSTEM_H_
 N#define __RSYSTEM_H_
-N
 N/*--- Header Includes -------------------------------------------------------*/
 N#include "string.h"
 L 1 "C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h" 1
@@ -569,7 +567,7 @@ N#endif
 N
 N/* end of string.h */
 N
-L 16 "..\Kernel\rsystem.h" 2
+L 14 "..\Kernel\rsystem.h" 2
 N#include "math.h"
 L 1 "C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h" 1
 N/*
@@ -2021,7 +2019,7 @@ N
 N#endif /* __math_h */
 N
 N/* end of math.h */
-L 17 "..\Kernel\rsystem.h" 2
+L 15 "..\Kernel\rsystem.h" 2
 N#include "key.h"
 L 1 "..\BSP\Key\key.h" 1
 N#ifndef __KEY_H_
@@ -26039,6 +26037,31 @@ Ntypedef  unsigned short int			INT16U;
 Ntypedef  unsigned int				INT32U;
 Ntypedef  unsigned long long int 	INT64U;
 N
+N
+N#define RCCA			    (RCC_APB2Periph_GPIOA)
+N#define RCCB			    (RCC_APB2Periph_GPIOB)
+N#define RCCC			    (RCC_APB2Periph_GPIOC)
+N#define RCCD			    (RCC_APB2Periph_GPIOD)
+N#define RCCE			    (RCC_APB2Periph_GPIOE)
+N#define RCCF			    (RCC_APB2Periph_GPIOF)
+N#define PORTA		      (GPIOA)
+N#define PORTB		      (GPIOB)
+N#define PORTC		      (GPIOC)
+N#define PORTD		      (GPIOD)
+N#define PORTE		      (GPIOE)
+N#define PORTF		      (GPIOF)
+N#define PIN0			    (GPIO_Pin_0)
+N#define PIN1			    (GPIO_Pin_1)
+N#define PIN2			    (GPIO_Pin_2)
+N#define PIN3			    (GPIO_Pin_3)
+N#define PIN4			    (GPIO_Pin_4)
+N#define PIN5			    (GPIO_Pin_5)
+N#define PIN6			    (GPIO_Pin_6)
+N#define PIN7			    (GPIO_Pin_7)
+N 
+N
+N
+N
 N/* float */
 Ntypedef  float						FLOAT32;
 Ntypedef  double						FLOAT64;
@@ -26151,10 +26174,8 @@ NData    : 2013/01/16
 NVersion : V1.0(alpha)
 NNote    : 
 N-----------------------------------------------------------------------------*/
-N
 N#ifndef __RSYSTEM_H_
 S#define __RSYSTEM_H_
-S
 S/*--- Header Includes -------------------------------------------------------*/
 S#include "string.h"
 S#include "math.h"
@@ -26163,26 +26184,22 @@ S#include "stdtype.h"
 S#include "rtime.h"
 S#include "rstring.h"
 S#include "rdelay.h"
-S#include "tm1638.h"
 S#include "task.h"
 S#include "stm32f10x.h"
 S#include "5110LCD.h"
 S#include "LCD.h"
+S#include "remote.h"
+S#include "74hc595.h"
 S#include "systest.h"
 S#include "led.h"
+S#include "MODE.h"
+S#include "bsp.h"
+S#include "nvic.h"
+S#include "GPIO.h"
 S#include "stmflash.h"
 S#include "systest.h"
-S/*--- Macro Defination ------------------------------------------------------*/
-S#define LED_Indicator_Port	GPIOC
-S#define LED_Indicator1		GPIO_Pin_0
-S#define LED_Indicator2		GPIO_Pin_1
-S#define LED_Indicator3		GPIO_Pin_2
-S#define LED_Indicator4		GPIO_Pin_3
-S#define LED_Indicator5		GPIO_Pin_4
-S#define	LED_Indicator_RCC	RCC_APB2Periph_GPIOC	
-S/*--- Data Struct Defination ------------------------------------------------*/
-S
-S/*--- Variables Export ------------------------------------------------------*/
+S#include "adc.h"
+S#include "voltage.h"
 SR_EXT INT32U 	r_nIntNest;
 S
 S/*--- Function Declaration --------------------------------------------------*/
@@ -26328,7 +26345,7 @@ Nvoid KeyAction(u8 flag);
 Nvoid MainKeytask(void);
 N
 N#endif
-L 18 "..\Kernel\rsystem.h" 2
+L 16 "..\Kernel\rsystem.h" 2
 N#include "stdtype.h"
 N#include "rtime.h"
 N#include "rstring.h"
@@ -26389,7 +26406,7 @@ Nextern void float_to_string( unsigned char data,  unsigned char *str);
 Nextern BOOLEAN FindDstInArray(BYTE *Src , INT32U SrcLen , BYTE *Dst , INT32U DstLen);
 N
 N#endif
-L 21 "..\Kernel\rsystem.h" 2
+L 19 "..\Kernel\rsystem.h" 2
 N#include "rdelay.h"
 L 1 "..\Kernel\rdelay.h" 1
 N
@@ -26402,44 +26419,7 @@ Nextern void HXZ_SoftDelay(INT32U u32Count);
 N
 N#endif
 N
-L 22 "..\Kernel\rsystem.h" 2
-N#include "tm1638.h"
-L 1 "..\BSP\tm1638.h" 1
-N#ifndef	_TM1638_H
-N#define	_TM1638_H
-N// #include "stm32f10x.h"	
-N #include "rsystem.h"
-N/*key1  key2  key3  key4  key5  key6 key7  key8*/
-N
-N//=============TM1638通讯端口设置=====================================//
-N#define DIO_PORT		GPIOA        //设置DIO(数据输入输出引脚)
-N#define DIO_PIN		  GPIO_Pin_7
-N#define CLK_PORT		GPIOA        //设置时钟（CLK）引脚
-N#define CLK_PIN		  GPIO_Pin_6
-N#define STB_PORT		GPIOA        //设置使能引脚（STB）引脚
-N#define STB_PIN		  GPIO_Pin_5
-N#define SET_CLK         GPIO_SetBits(CLK_PORT, CLK_PIN)
-N#define RESET_CLK       GPIO_ResetBits(CLK_PORT, CLK_PIN)
-N#define SET_DIO         GPIO_SetBits(DIO_PORT, DIO_PIN)
-N#define RESET_DIO       GPIO_ResetBits(DIO_PORT, DIO_PIN)
-N#define SET_STB         GPIO_SetBits(STB_PORT, STB_PIN)
-N#define RESET_STB       GPIO_ResetBits(STB_PORT, STB_PIN)
-N//=================TM1638指令定义====================================//
-N#define Writedat  0x44 /*write data into display register*/
-N#define Readdat   0x42  /*read key_scan data*/
-N#define Autoaddrin 0x40 
-Nvoid TM1638GPIO_Config(void);
-Nvoid TM1638_Write(unsigned char	DATA);
-Nunsigned char TM1638_Read(void);
-Nvoid Write_COM(unsigned char cmd);
-Nvoid Write_DATA(unsigned char add,unsigned char DATA);
-Nunsigned char Read_key(void);
-Nvoid Write_oneLED(unsigned char num,unsigned char flag);
-Nvoid Write_allLED(unsigned char LED_flag);
-Nvoid init_TM1638(void);
-Nvoid key_scan(void);
-N#endif
-L 23 "..\Kernel\rsystem.h" 2
+L 20 "..\Kernel\rsystem.h" 2
 N#include "task.h"
 L 1 "..\App\Task\task.h" 1
 N
@@ -26468,7 +26448,7 @@ Nextern void SendConnet(void);
 Nextern void  Getdatatask(void);
 N#endif
 N
-L 24 "..\Kernel\rsystem.h" 2
+L 21 "..\Kernel\rsystem.h" 2
 N#include "stm32f10x.h"
 N#include "5110LCD.h"
 L 1 "..\BSP\5110LCD.h" 1
@@ -26497,7 +26477,7 @@ N #define sce1   GPIO_SetBits(GPIOA, GPIO_Pin_8)  //片选
 N #define res1   GPIO_SetBits(GPIOA, GPIO_Pin_9)  //复位,0复位
 N #define dc1    GPIO_SetBits(GPIOA, GPIO_Pin_10)   //1写数据，0写指令
 N #define sdin1  GPIO_SetBits(GPIOA, GPIO_Pin_11)   //数据
-N #define sclk1  GPIO_SetBits(GPIOA, GPIO_Pin_12)   //时钟
+N #define  sclk1  GPIO_SetBits(GPIOA, GPIO_Pin_12)   //时钟
 N	#define back1  GPIO_SetBits(GPIOA, GPIO_Pin_1)    
 Nvoid GPIO_Configuration_LCD(void);
 Nvoid LCD_WriteByte(unsigned char dt, unsigned char command);
@@ -26514,7 +26494,7 @@ Nvoid LCD_Write_cn(unsigned char row, unsigned char page,unsigned char c); //row
 N
 N 
 N#endif
-L 26 "..\Kernel\rsystem.h" 2
+L 23 "..\Kernel\rsystem.h" 2
 N#include "LCD.h"
 L 1 "..\App\LCD.h" 1
 N #ifndef __LCD_H
@@ -26527,7 +26507,116 @@ N
 N extern void LcdMainInit(void);
 N extern void LcdDislayTask(void);
 N#endif
-L 27 "..\Kernel\rsystem.h" 2
+L 24 "..\Kernel\rsystem.h" 2
+N#include "remote.h"
+L 1 "..\BSP\remote.h" 1
+N#ifndef __RED_H
+N#define __RED_H    
+N//////////////////////////////////////////////////////////////////////////////////	 
+N 
+N//Copyright(C) 广州市星翼电子科技有限公司 2009-2019
+N//All rights reserved									  
+N//////////////////////////////////////////////////////////////////////////////////
+N  
+N#define RDATA 	PAin(1)	 	//红外数据输入脚
+N#include "rsystem.h"
+N//红外遥控识别码(ID),每款遥控器的该值基本都不一样,但也有一样的.
+N//我们选用的遥控器识别码为0
+N#define REMOTE_ID 0      		   
+Nextern  u8* str; 
+N
+Ntypedef enum //跟第一个定义不同的是，此处的标号DAY省略，这是允许的。
+N{
+N  Code_UP    =0   ,
+N  Code_DOWN  =162 ,
+N  Code_PSW   =98  ,
+N  Code_EX    =2   ,
+N  Code_A     =226 ,
+N  Code_B     =194 ,
+N  Code_C     =34  ,
+N  Code_D     =224 ,
+N  Code_E     =168 ,
+N  Code_S     =144 ,
+N  Code_CON   =104 ,
+N  Code_T1    =152 ,
+N  Code_T2    =176 ,
+N  Code_T3    =48  ,
+N  Code_T4    =24  ,
+N  Code_T5    =122 ,
+N  Code_T6    =16  ,
+N  Code_T7    =56  ,
+N  Code_T8    =90  ,
+N  Code_T9    =66  ,
+N  Code_T10   =82
+N} Remotecode;
+Nextern u8 RmtCnt;			//按键按下的次数
+N
+Nvoid Remote_Init(void);    	//红外传感器接收头引脚初始化
+Nu8 Remote_Scan(void);	  
+Nextern void Remote_check(void);
+N#endif
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+L 25 "..\Kernel\rsystem.h" 2
+N#include "74hc595.h"
+L 1 "..\BSP\74hc595.h" 1
+N
+N
+N#ifndef __74HC595_H
+N
+N#define __74HC595_H
+N
+N// 74HC595
+N#include "rsystem.h"
+N#include "rtime.h"
+N
+N#define HC595_PORT  GPIOA
+N
+N#define HC595_DATA  GPIO_Pin_8    // serial data input, pin14
+N
+N#define HC595_SCLK  GPIO_Pin_9   // shift register clock input, pin11
+N
+N#define HC595_RCLK  GPIO_Pin_10     // storage register clock input, pin12
+N
+N#define HC595_DELAY Timer_Delayms(1);
+N#define open  1
+N#define close 2
+N#define start  3
+N#define stop   4
+N#define strong  5
+N#define door  6
+N#define mode  7
+N#define OPENCMD  8
+N #define CLOSECMD  9
+N  #define Delay  10
+N	  #define AutoConnect  11
+Nextern uint8_t hc595data[8];
+Nextern void hc595_init ( void ) ;
+N
+Nextern void hc595_write_byte ( uint8_t byte ) ;
+N
+Nextern void hc595_latch ( void ) ;
+N
+Nextern void hc595_display ( uint8_t data [ ] ) ;
+Nextern void setMainMode(u8 value);
+Nextern void setMainValue(u8 mode1, u8 value);
+Nextern void setOpenclose(u8 mode1,u8 type1);
+Nextern void SetHCMode(u8 type);
+N#endif
+L 26 "..\Kernel\rsystem.h" 2
 N#include "systest.h"
 L 1 "..\BSP\uart\systest.h" 1
 N
@@ -26554,25 +26643,82 @@ Nextern void SysTest_Putstr(const BYTE *str);
 N
 Nextern void  SysTest_Putchar1(unsigned char c);
 Nextern BOOLEAN IsSysTestDataRcved(void);
+Nextern void SysTest_Putstr1(const BYTE str);
 N
+N#endif
+N
+L 27 "..\Kernel\rsystem.h" 2
+N#include "led.h"
+L 1 "..\BSP\led.h" 1
+N#ifndef __LED_H
+N#define __LED_H
+N#include "rsystem.h"
+N#define LED1_RCC			    (RCC_APB2Periph_GPIOC)
+N#define LED1_PORT		      (GPIOC)
+N#define LED1_PIN			    (GPIO_Pin_0)  
+N
+N#define LED2_RCC			    (RCC_APB2Periph_GPIOC)
+N#define LED2_PORT		      (GPIOC)
+N#define LED2_PIN			    (GPIO_Pin_0)  
+N
+N#define LED3_RCC			    (RCC_APB2Periph_GPIOC)
+N#define LED3_PORT		      (GPIOC)
+N#define LED3_PIN			    (GPIO_Pin_0) 
+N
+N#define LED4_RCC			    (RCC_APB2Periph_GPIOC)
+N#define LED4_PORT		      (GPIOC)
+N#define LED4_PIN			    (GPIO_Pin_0) 
+N#define CLOSE 0
+N#define OPEN  1
+N
+N#define LED1  1
+N#define LED2  2
+N#define LED3  3
+N#define LED4  4
+N
+Nextern void Led_Init(void);
+Nextern void Led1_PortInit(void);
+Nextern void Led1_On(void);
+Nextern void Led1_Off(void);
+Nextern void Led_Contr(u8 lednum,u8 status);
 N#endif
 N
 L 28 "..\Kernel\rsystem.h" 2
-N#include "led.h"
-L 1 "..\BSP\led.h" 1
+N#include "MODE.h"
+L 1 "..\App\MODE.h" 1
+N #ifndef __LCD_H
+S #define __LCD_H
+S
+S #include "stm32f10x.h"	
+S #include "rsystem.h"
+S
+N#endif
+L 29 "..\Kernel\rsystem.h" 2
+N#include "bsp.h"
+L 1 "..\BSP\bsp.h" 1
+N#ifndef __BSP_H_
+N#define __BSP_H_
+N/*--- File Includes ------------------------------------------------------*/
+N#include "rsystem.h"
+Nextern void BSP_Init(void);
+N#endif
+L 30 "..\Kernel\rsystem.h" 2
+N#include "nvic.h"
+L 1 "..\BSP\Basic\nvic.h" 1
 N
-N
-N#ifndef __LED_H
-N#define __LED_H
-N
-N
-Nextern void Led_PortInit(void);
-Nextern void Led_On(void);
-Nextern void Led_Off(void);
-N
+N#ifndef __NVIC_H_
+N#define __NVIC_H_
+Nextern void NVIC_Configuration(void);
 N#endif
 N
-L 29 "..\Kernel\rsystem.h" 2
+L 31 "..\Kernel\rsystem.h" 2
+N#include "GPIO.h"
+L 1 "..\BSP\GPIO.h" 1
+N#ifndef __GPIO_H_
+N#define __GPIO_H_
+W "..\BSP\GPIO.h" 3 7 last line of file ends without a newline
+N#endif
+L 32 "..\Kernel\rsystem.h" 2
 N#include "stmflash.h"
 L 1 "..\BSP\stmflash.h" 1
 N#ifndef __STMFLASH_H__
@@ -26614,228 +26760,8 @@ N
 N
 N
 N
-L 30 "..\Kernel\rsystem.h" 2
+L 33 "..\Kernel\rsystem.h" 2
 N#include "systest.h"
-N/*--- Macro Defination ------------------------------------------------------*/
-N#define LED_Indicator_Port	GPIOC
-N#define LED_Indicator1		GPIO_Pin_0
-N#define LED_Indicator2		GPIO_Pin_1
-N#define LED_Indicator3		GPIO_Pin_2
-N#define LED_Indicator4		GPIO_Pin_3
-N#define LED_Indicator5		GPIO_Pin_4
-N#define	LED_Indicator_RCC	RCC_APB2Periph_GPIOC	
-N/*--- Data Struct Defination ------------------------------------------------*/
-N
-N/*--- Variables Export ------------------------------------------------------*/
-NR_EXT INT32U 	r_nIntNest;
-Xextern INT32U 	r_nIntNest;
-N
-N/*--- Function Declaration --------------------------------------------------*/
-NR_EXT void 		RInit(void);
-Xextern void 		RInit(void);
-NR_EXT void 		RStart(void);
-Xextern void 		RStart(void);
-NR_EXT void 		REnterInt(void);
-Xextern void 		REnterInt(void);
-NR_EXT void 		RExitInt(void);
-Xextern void 		RExitInt(void);
-N
-N#endif
-L 6 "..\App\Voltage\voltage.c" 2
-N#include "bsp.h"
-L 1 "..\BSP\bsp.h" 1
-N
-N#ifndef __BSP_H_
-N#define __BSP_H_
-N
-N/*--- File Includes ------------------------------------------------------*/
-N#include "nvic.h"
-L 1 "..\BSP\Basic\nvic.h" 1
-N
-N#ifndef __NVIC_H_
-N#define __NVIC_H_
-N
-Nextern void NVIC_Configuration(void);
-N
-N#endif
-N
-L 7 "..\BSP\bsp.h" 2
-N#include "uart.h"
-L 1 "..\BSP\Basic\uart.h" 1
-N
-N#ifndef __UART_H_
-N#define __UART_H_
-N
-N#include "stm32f10x.h"
-N#include "stdtype.h"
-N
-N/* Function Export */
-Nextern void UART1_Init(INT32U u32BaudRate);
-Nextern void UART2_Init(INT32U u32BaudRate);
-Nextern void UART3_Init(INT32U u32BaudRate);
-Nextern void UART4_Init(INT32U u32BaudRate);
-Nextern void UART5_Init(INT32U u32BaudRate);
-N
-Nextern void UART_Config_RxInterrupt(USART_TypeDef *uart, FunctionalState state);
-Nextern void UART_SendDataBlock(USART_TypeDef *USART,  BYTE *cpData, INT32U u32Count);
-N
-N#endif
-L 8 "..\BSP\bsp.h" 2
-N#include "iwdg.h"
-L 1 "..\BSP\IWDG\iwdg.h" 1
-N#ifndef __IWDG_H_
-N#define __IWDG_H_
-N
-N#include "stm32f10x_iwdg.h"
-L 1 "..\Library\inc\stm32f10x_iwdg.h" 1
-N/**
-N  ******************************************************************************
-N  * @file    stm32f10x_iwdg.h
-N  * @author  MCD Application Team
-N  * @version V3.3.0
-N  * @date    04/16/2010
-N  * @brief   This file contains all the functions prototypes for the IWDG 
-N  *          firmware library.
-N  ******************************************************************************
-N  * @copy
-N  *
-N  * THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
-N  * WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE
-N  * TIME. AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY
-N  * DIRECT, INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING
-N  * FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE
-N  * CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
-N  *
-N  * <h2><center>&copy; COPYRIGHT 2010 STMicroelectronics</center></h2>
-N  */ 
-N
-N/* Define to prevent recursive inclusion -------------------------------------*/
-N#ifndef __STM32F10x_IWDG_H
-N#define __STM32F10x_IWDG_H
-N
-N#ifdef __cplusplus
-S extern "C" {
-N#endif
-N
-N/* Includes ------------------------------------------------------------------*/
-N#include "stm32f10x.h"
-N
-N/** @addtogroup STM32F10x_StdPeriph_Driver
-N  * @{
-N  */
-N
-N/** @addtogroup IWDG
-N  * @{
-N  */
-N
-N/** @defgroup IWDG_Exported_Types
-N  * @{
-N  */
-N
-N/**
-N  * @}
-N  */
-N
-N/** @defgroup IWDG_Exported_Constants
-N  * @{
-N  */
-N
-N/** @defgroup IWDG_WriteAccess
-N  * @{
-N  */
-N
-N#define IWDG_WriteAccess_Enable     ((uint16_t)0x5555)
-N#define IWDG_WriteAccess_Disable    ((uint16_t)0x0000)
-N#define IS_IWDG_WRITE_ACCESS(ACCESS) (((ACCESS) == IWDG_WriteAccess_Enable) || \
-N                                      ((ACCESS) == IWDG_WriteAccess_Disable))
-X#define IS_IWDG_WRITE_ACCESS(ACCESS) (((ACCESS) == IWDG_WriteAccess_Enable) ||                                       ((ACCESS) == IWDG_WriteAccess_Disable))
-N/**
-N  * @}
-N  */
-N
-N/** @defgroup IWDG_prescaler 
-N  * @{
-N  */
-N
-N#define IWDG_Prescaler_4            ((uint8_t)0x00)
-N#define IWDG_Prescaler_8            ((uint8_t)0x01)
-N#define IWDG_Prescaler_16           ((uint8_t)0x02)
-N#define IWDG_Prescaler_32           ((uint8_t)0x03)
-N#define IWDG_Prescaler_64           ((uint8_t)0x04)
-N#define IWDG_Prescaler_128          ((uint8_t)0x05)
-N#define IWDG_Prescaler_256          ((uint8_t)0x06)
-N#define IS_IWDG_PRESCALER(PRESCALER) (((PRESCALER) == IWDG_Prescaler_4)  || \
-N                                      ((PRESCALER) == IWDG_Prescaler_8)  || \
-N                                      ((PRESCALER) == IWDG_Prescaler_16) || \
-N                                      ((PRESCALER) == IWDG_Prescaler_32) || \
-N                                      ((PRESCALER) == IWDG_Prescaler_64) || \
-N                                      ((PRESCALER) == IWDG_Prescaler_128)|| \
-N                                      ((PRESCALER) == IWDG_Prescaler_256))
-X#define IS_IWDG_PRESCALER(PRESCALER) (((PRESCALER) == IWDG_Prescaler_4)  ||                                       ((PRESCALER) == IWDG_Prescaler_8)  ||                                       ((PRESCALER) == IWDG_Prescaler_16) ||                                       ((PRESCALER) == IWDG_Prescaler_32) ||                                       ((PRESCALER) == IWDG_Prescaler_64) ||                                       ((PRESCALER) == IWDG_Prescaler_128)||                                       ((PRESCALER) == IWDG_Prescaler_256))
-N/**
-N  * @}
-N  */
-N
-N/** @defgroup IWDG_Flag 
-N  * @{
-N  */
-N
-N#define IWDG_FLAG_PVU               ((uint16_t)0x0001)
-N#define IWDG_FLAG_RVU               ((uint16_t)0x0002)
-N#define IS_IWDG_FLAG(FLAG) (((FLAG) == IWDG_FLAG_PVU) || ((FLAG) == IWDG_FLAG_RVU))
-N#define IS_IWDG_RELOAD(RELOAD) ((RELOAD) <= 0xFFF)
-N/**
-N  * @}
-N  */
-N
-N/**
-N  * @}
-N  */
-N
-N/** @defgroup IWDG_Exported_Macros
-N  * @{
-N  */
-N
-N/**
-N  * @}
-N  */
-N
-N/** @defgroup IWDG_Exported_Functions
-N  * @{
-N  */
-N
-Nvoid IWDG_WriteAccessCmd(uint16_t IWDG_WriteAccess);
-Nvoid IWDG_SetPrescaler(uint8_t IWDG_Prescaler);
-Nvoid IWDG_SetReload(uint16_t Reload);
-Nvoid IWDG_ReloadCounter(void);
-Nvoid IWDG_Enable(void);
-NFlagStatus IWDG_GetFlagStatus(uint16_t IWDG_FLAG);
-N
-N#ifdef __cplusplus
-S}
-N#endif
-N
-N#endif /* __STM32F10x_IWDG_H */
-N/**
-N  * @}
-N  */
-N
-N/**
-N  * @}
-N  */
-N
-N/**
-N  * @}
-N  */
-N
-N/******************* (C) COPYRIGHT 2010 STMicroelectronics *****END OF FILE****/
-L 5 "..\BSP\IWDG\iwdg.h" 2
-N
-Nextern void Init_IWDG(void);
-N
-N#endif
-L 9 "..\BSP\bsp.h" 2
-N#include "key.h"
 N#include "adc.h"
 L 1 "..\BSP\ADC\adc.h" 1
 N
@@ -26850,20 +26776,7 @@ Nextern void 	ADC_InitChannel(void);
 Nextern INT32U 	ADC_GetValue(void);
 N
 N#endif
-L 11 "..\BSP\bsp.h" 2
-N
-N
-N/*--- Macro Defination ---------------------------------------------------*/
-N
-N/*--- Data Struct Defination ---------------------------------------------*/
-N
-N/*--- Variables Export ---------------------------------------------------*/
-N
-N/*--- Function Export ----------------------------------------------------*/
-N
-N#endif
-N
-L 7 "..\App\Voltage\voltage.c" 2
+L 35 "..\Kernel\rsystem.h" 2
 N#include "voltage.h"
 L 1 "..\App\Voltage\voltage.h" 1
 N
@@ -26894,7 +26807,23 @@ Nextern INT8U GetRealVoltage(void);
 N
 N#endif
 N
-L 8 "..\App\Voltage\voltage.c" 2
+L 36 "..\Kernel\rsystem.h" 2
+NR_EXT INT32U 	r_nIntNest;
+Xextern INT32U 	r_nIntNest;
+N
+N/*--- Function Declaration --------------------------------------------------*/
+NR_EXT void 		RInit(void);
+Xextern void 		RInit(void);
+NR_EXT void 		RStart(void);
+Xextern void 		RStart(void);
+NR_EXT void 		REnterInt(void);
+Xextern void 		REnterInt(void);
+NR_EXT void 		RExitInt(void);
+Xextern void 		RExitInt(void);
+N
+N#endif
+L 6 "..\App\Voltage\voltage.c" 2
+N 
 N
 N/*--- Macro Defination ---------------------------------------------------*/     
 N#define VOLATAGE_SAMPLE_INTERVEL (1000)		  // 电压采集的时间间隔(ms)			  (1000)

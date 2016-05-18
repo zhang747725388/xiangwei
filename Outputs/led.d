@@ -37,3 +37,5 @@
 ..\outputs\led.o: ..\BSP\Basic\nvic.h
 ..\outputs\led.o: ..\BSP\GPIO.h
 ..\outputs\led.o: ..\BSP\stmflash.h
+..\outputs\led.o: ..\BSP\ADC\adc.h
+..\outputs\led.o: ..\App\Voltage\voltage.h

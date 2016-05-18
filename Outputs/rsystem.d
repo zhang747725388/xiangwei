@@ -37,3 +37,5 @@
 ..\outputs\rsystem.o: ..\BSP\Basic\nvic.h
 ..\outputs\rsystem.o: ..\BSP\GPIO.h
 ..\outputs\rsystem.o: ..\BSP\stmflash.h
+..\outputs\rsystem.o: ..\BSP\ADC\adc.h
+..\outputs\rsystem.o: ..\App\Voltage\voltage.h

@@ -19,14 +19,17 @@
 000006  f7fffffe          BL       MainKeytask
 ;;;10     	    Getdatatask();
 00000a  f7fffffe          BL       Getdatatask
-;;;11      	    LcdDislayTask();
-00000e  f7fffffe          BL       LcdDislayTask
+;;;11      	    
+;;;12     		  VoltageSampleTask();
+00000e  f7fffffe          BL       VoltageSampleTask
                   |L1.18|
 000012  e7f8              B        |L1.6|
-;;;12     	}
-;;;13     
-;;;14     }
-;;;15     
+;;;13     		
+;;;14     		
+;;;15     	}
+;;;16     
+;;;17     }
+;;;18     
                           ENDP
 
 

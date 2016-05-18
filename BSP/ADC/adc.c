@@ -1,20 +1,20 @@
  
 
-#include "stm32f10x.h"
-#include "adc.h"
+#include "rsystem.h"
+ 
 
 void ADC_InitChannel(void)
 {
 	GPIO_InitTypeDef GPIO_InitStructure;
 	ADC_InitTypeDef ADC_InitStructure;
 	
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1 | RCC_APB2Periph_GPIOA | RCC_APB2Periph_AFIO, ENABLE);
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1 | RCC_APB2Periph_GPIOC | RCC_APB2Periph_AFIO, ENABLE);
 	
 	/* Configure PA.01 (ADC Channel 1) as analog input -------------------------*/
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AIN;
-	GPIO_Init(GPIOA, &GPIO_InitStructure);   
+	GPIO_Init(GPIOC, &GPIO_InitStructure);   
 	
 	/* ADC1 configuration ------------------------------------------------------*/
 	ADC_InitStructure.ADC_Mode = ADC_Mode_Independent;	                /* 独立模式 */
@@ -22,7 +22,7 @@ void ADC_InitChannel(void)
 	ADC_InitStructure.ADC_ContinuousConvMode = ENABLE;	                /* 连续转换 */
 	ADC_InitStructure.ADC_ExternalTrigConv = ADC_ExternalTrigConv_None; /* 转换不受外界决定 */
 	ADC_InitStructure.ADC_DataAlign = ADC_DataAlign_Right;		        /* 右对齐 */
-	ADC_InitStructure.ADC_NbrOfChannel = 1;					            /* 扫描通道数 */
+	ADC_InitStructure.ADC_NbrOfChannel = 11;					            /* 扫描通道数 */
 	ADC_Init(ADC1, &ADC_InitStructure);
 	
 	/* ADC1 regular channel 1 configuration */ 

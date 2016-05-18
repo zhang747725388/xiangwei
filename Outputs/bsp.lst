@@ -1,7 +1,6 @@
 L 1 "..\BSP\bsp.c"
 N
-N/*   ATC20终端-硬件驱动程序汇总   */
-N
+N 
 N/*--- File Includes ------------------------------------------------------*/
 N#include "rsystem.h"
 L 1 "..\Kernel\rsystem.h" 1
@@ -26198,7 +26197,8 @@ S#include "nvic.h"
 S#include "GPIO.h"
 S#include "stmflash.h"
 S#include "systest.h"
-S
+S#include "adc.h"
+S#include "voltage.h"
 SR_EXT INT32U 	r_nIntNest;
 S
 S/*--- Function Declaration --------------------------------------------------*/
@@ -26761,7 +26761,52 @@ N
 N
 L 33 "..\Kernel\rsystem.h" 2
 N#include "systest.h"
+N#include "adc.h"
+L 1 "..\BSP\ADC\adc.h" 1
 N
+N#ifndef __ADC_H_
+N#define __ADC_H_
+N
+N#include "stdtype.h"
+N
+N#define ADC_NOT_READY		(0xFFFFFFFF) 
+N
+Nextern void 	ADC_InitChannel(void);
+Nextern INT32U 	ADC_GetValue(void);
+N
+N#endif
+L 35 "..\Kernel\rsystem.h" 2
+N#include "voltage.h"
+L 1 "..\App\Voltage\voltage.h" 1
+N
+N#ifndef __VOLTAGE_H_
+N#define __VOLTAGE_H_
+N
+N/*--- File Includes ------------------------------------------------------*/
+N#include "stdtype.h"
+N
+N/*--- Macro Defination ---------------------------------------------------*/
+N
+N/*--- Data Struct Defination ---------------------------------------------*/
+Ntypedef enum _VoltageStaEnum{
+N	Vol_Default = 0,
+N	Vol_Error   = 1,
+N	Vol_OK      = 2
+N}VoltageStaEnum;
+N
+N/*--- Variables Export ---------------------------------------------------*/
+N
+N/*--- Function Export ----------------------------------------------------*/
+N
+Nextern void VoltageSampleInit(void);
+Nextern void VoltageSampleTask(void);
+Nextern double GetVoltage(void);
+Nextern VoltageStaEnum GetVoltageSta(void);
+Nextern INT8U GetRealVoltage(void);
+N
+N#endif
+N
+L 36 "..\Kernel\rsystem.h" 2
 NR_EXT INT32U 	r_nIntNest;
 Xextern INT32U 	r_nIntNest;
 N
@@ -26776,7 +26821,7 @@ NR_EXT void 		RExitInt(void);
 Xextern void 		RExitInt(void);
 N
 N#endif
-L 6 "..\BSP\bsp.c" 2
+L 5 "..\BSP\bsp.c" 2
 N/*--- Macro Defination ---------------------------------------------------*/
 N
 N/*--- Data Struct Defination ---------------------------------------------*/
@@ -26800,8 +26845,7 @@ N
 N  SysTest_Bsp_Init();
 N	LcdMainInit();
 N	Led_Init();
-N 
-N 
-N
+N  ADC_InitChannel();
+N	VoltageSampleInit();// ADC
 N}
 N 
