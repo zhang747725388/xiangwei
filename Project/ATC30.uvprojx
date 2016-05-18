@@ -563,6 +563,11 @@
               <FileType>1</FileType>
               <FilePath>..\BSP\GPIO.c</FilePath>
             </File>
+            <File>
+              <FileName>adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\ADC\adc.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -587,6 +592,16 @@
               <FileName>task.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\App\Task\task.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>App_Voltage</GroupName>
+          <Files>
+            <File>
+              <FileName>voltage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App\Voltage\voltage.c</FilePath>
             </File>
           </Files>
         </Group>
