@@ -1,0 +1,587 @@
+L 1 "..\Kernel\rstring.c"
+N/*--- SOURCE FILE DESCRIPTOR ---------------------------------------------------
+NProject : Realtime Micro Library
+NFile    : rstring.c
+NAuthor  : automatic.dai
+NE-mail  : automatic.dai@gmail.com
+NData    : 2013/01/16
+NVersion : V1.0(alpha)
+NNote    : 
+N------------------------------------------------------------------------------*/
+N
+N#include "rstring.h"
+L 1 "..\Kernel\rstring.h" 1
+N/*--- HEADER FILE DESCRIPTOR --------------------------------------------------
+NProject : Realtime Micro Library
+NFile    : string.h
+NAuthor  : automatic.dai
+NE-mail  : automatic.dai@gmail.com
+NData    : 2013/01/16
+NVersion : V1.0(alpha)
+NNote    : 
+N-----------------------------------------------------------------------------*/
+N
+N#ifndef __RSTRING_H_
+N#define __RSTRING_H_
+N
+N/*--- Header Includes -------------------------------------------------------*/
+N#include "stdtype.h"
+L 1 "..\Kernel\stdtype.h" 1
+N/*--- HEADER FILE DESCRIPTOR --------------------------------------------------
+NProject : Realtime Micro Library
+NFile    : stdtype.h
+NAuthor  : automatic.dai
+NE-mail  : automatic.dai@gmail.com
+NData    : 2013/01/16
+NVersion : V1.0(alpha)
+NNote    : 
+N-----------------------------------------------------------------------------*/
+N
+N#ifndef __STDTYPE_H_
+N#define __STDTYPE_H_
+N
+N/*--- Header Includes -------------------------------------------------------*/
+N
+N/*--- Macro Defination ------------------------------------------------------*/
+N/* Bit Manipulate */
+N#define BIT_SET(byte,bit)			( (byte) |=  (1<<(bit)) )
+N#define BIT_CLR(byte,bit)			( (byte) &= ~(1<<(bit)) )
+N#define BIT_CPL(byte,bit)			( (byte) ^=  (1<<(bit)) )
+N#define BIT_GET(byte,bit)			( (byte) &   (1<<(bit)) )
+N
+N#define BIT_0						(0x01)
+N#define BIT_1						(0x02)
+N#define BIT_2						(0x04)
+N#define BIT_3						(0x08)
+N#define BIT_4						(0x10)
+N#define BIT_5						(0x20)
+N#define BIT_6						(0x40)
+N#define BIT_7						(0x80)
+N
+N/* NULL Pointer */
+N#define	R_NULL						((void *)0)
+N
+N/* Attributes */
+N#define R_IO						volatile
+N#define R_I							volatile const
+N#define R_O							volatile
+N
+N#define R_EXT						extern
+N#define R_STATIC					static
+N
+N#define R_COUNTER_TYPE				0x01
+N#define R_TIMER_TYPE				0x02
+N#define ISTYPE(x,y)					(x->type == y)
+N		
+N/*--- Data Struct Defination ------------------------------------------------*/
+N/* signed */
+Ntypedef  signed char				CHAR;
+Ntypedef  signed char				INT8S;
+Ntypedef  signed short int			INT16S;
+Ntypedef  signed int					INT32S;
+Ntypedef  signed long long int		INT64S;
+N
+N/* unsigned */
+Ntypedef  unsigned char				BYTE;
+Ntypedef  unsigned char				UCHAR;
+Ntypedef  unsigned char				uchar;
+Ntypedef  unsigned char				INT8U;
+Ntypedef  unsigned short int			INT16U;
+Ntypedef  unsigned int				INT32U;
+Ntypedef  unsigned long long int 	INT64U;
+N
+N
+N#define RCCA			    (RCC_APB2Periph_GPIOA)
+N#define RCCB			    (RCC_APB2Periph_GPIOB)
+N#define RCCC			    (RCC_APB2Periph_GPIOC)
+N#define RCCD			    (RCC_APB2Periph_GPIOD)
+N#define RCCE			    (RCC_APB2Periph_GPIOE)
+N#define RCCF			    (RCC_APB2Periph_GPIOF)
+N#define PORTA		      (GPIOA)
+N#define PORTB		      (GPIOB)
+N#define PORTC		      (GPIOC)
+N#define PORTD		      (GPIOD)
+N#define PORTE		      (GPIOE)
+N#define PORTF		      (GPIOF)
+N#define PIN0			    (GPIO_Pin_0)
+N#define PIN1			    (GPIO_Pin_1)
+N#define PIN2			    (GPIO_Pin_2)
+N#define PIN3			    (GPIO_Pin_3)
+N#define PIN4			    (GPIO_Pin_4)
+N#define PIN5			    (GPIO_Pin_5)
+N#define PIN6			    (GPIO_Pin_6)
+N#define PIN7			    (GPIO_Pin_7)
+N 
+N
+N
+N
+N/* float */
+Ntypedef  float						FLOAT32;
+Ntypedef  double						FLOAT64;
+N
+N/* boolean */
+Ntypedef  enum _BOOLEAN
+N{
+N	bFALSE = 0,
+N	bTRUE  = 1
+N}BOOLEAN;
+N
+N/* function pointer */
+Ntypedef void 						(*CALLBACK)(INT32U param);
+N
+N/* mem address */
+Ntypedef R_IO INT32U 				*MEMADDR;
+Xtypedef volatile INT32U 				*MEMADDR;
+N
+N/*--- Variables Export ------------------------------------------------------*/
+N
+N/*--- Function Declaration --------------------------------------------------*/
+N#define SYSTEM_SUPPORT_OS		0		// 
+N																	    
+N	 
+N 
+N#define BITBAND(addr, bitnum) ((addr & 0xF0000000)+0x2000000+((addr &0xFFFFF)<<5)+(bitnum<<2)) 
+N#define MEM_ADDR(addr)  *((volatile unsigned long  *)(addr)) 
+N#define BIT_ADDR(addr, bitnum)   MEM_ADDR(BITBAND(addr, bitnum)) 
+N//IO?úμ??·ó3é?
+N#define GPIOA_ODR_Addr    (GPIOA_BASE+12) //0x4001080C 
+N#define GPIOB_ODR_Addr    (GPIOB_BASE+12) //0x40010C0C 
+N#define GPIOC_ODR_Addr    (GPIOC_BASE+12) //0x4001100C 
+N#define GPIOD_ODR_Addr    (GPIOD_BASE+12) //0x4001140C 
+N#define GPIOE_ODR_Addr    (GPIOE_BASE+12) //0x4001180C 
+N#define GPIOF_ODR_Addr    (GPIOF_BASE+12) //0x40011A0C    
+N#define GPIOG_ODR_Addr    (GPIOG_BASE+12) //0x40011E0C    
+N
+N#define GPIOA_IDR_Addr    (GPIOA_BASE+8) //0x40010808 
+N#define GPIOB_IDR_Addr    (GPIOB_BASE+8) //0x40010C08 
+N#define GPIOC_IDR_Addr    (GPIOC_BASE+8) //0x40011008 
+N#define GPIOD_IDR_Addr    (GPIOD_BASE+8) //0x40011408 
+N#define GPIOE_IDR_Addr    (GPIOE_BASE+8) //0x40011808 
+N#define GPIOF_IDR_Addr    (GPIOF_BASE+8) //0x40011A08 
+N#define GPIOG_IDR_Addr    (GPIOG_BASE+8) //0x40011E08 
+N 
+N//IO?ú2ù×÷,????μ￥ò?μ?IO?ú!
+N//è·±￡nμ??μD?óú16!
+N#define PAout(n)   BIT_ADDR(GPIOA_ODR_Addr,n)  //ê?3? 
+N#define PAin(n)    BIT_ADDR(GPIOA_IDR_Addr,n)  //ê?è? 
+N
+N#define PBout(n)   BIT_ADDR(GPIOB_ODR_Addr,n)  //ê?3? 
+N#define PBin(n)    BIT_ADDR(GPIOB_IDR_Addr,n)  //ê?è? 
+N
+N#define PCout(n)   BIT_ADDR(GPIOC_ODR_Addr,n)  //ê?3? 
+N#define PCin(n)    BIT_ADDR(GPIOC_IDR_Addr,n)  //ê?è? 
+N
+N#define PDout(n)   BIT_ADDR(GPIOD_ODR_Addr,n)  //ê?3? 
+N#define PDin(n)    BIT_ADDR(GPIOD_IDR_Addr,n)  //ê?è? 
+N
+N#define PEout(n)   BIT_ADDR(GPIOE_ODR_Addr,n)  //ê?3? 
+N#define PEin(n)    BIT_ADDR(GPIOE_IDR_Addr,n)  //ê?è?
+N
+N#define PFout(n)   BIT_ADDR(GPIOF_ODR_Addr,n)  //ê?3? 
+N#define PFin(n)    BIT_ADDR(GPIOF_IDR_Addr,n)  //ê?è?
+N
+N#define PGout(n)   BIT_ADDR(GPIOG_ODR_Addr,n)  //ê?3? 
+N#define PGin(n)    BIT_ADDR(GPIOG_IDR_Addr,n)  //ê?è?
+N#endif
+L 16 "..\Kernel\rstring.h" 2
+N
+N/*--- Macro Defination ------------------------------------------------------*/
+N#define  STRING_DECLAR(X,Y)		char X[Y+1]
+N#define  STRING					      char*
+N#define  STRING_NULL			(STRING)(R_NULL)
+N
+N#define  STRING_CHAR_NOT_FOUND	(0xFFFFFFFF)
+N
+N/*--- Data Struct Defination ------------------------------------------------*/
+N
+N/*--- Variables Export ------------------------------------------------------*/
+N
+N/*--- Function Declaration --------------------------------------------------*/
+NR_EXT STRING 	 RStrncpy(STRING src, STRING dst, INT32U num);
+Xextern char* 	 RStrncpy(char* src, char* dst, INT32U num);
+NR_EXT BOOLEAN 	 RStrncmp(STRING src, STRING dst, INT32U num);
+Xextern BOOLEAN 	 RStrncmp(char* src, char* dst, INT32U num);
+NR_EXT STRING	 RStrcat(STRING dst, STRING src);
+Xextern char*	 RStrcat(char* dst, char* src);
+NR_EXT INT32U	 RStrFind(STRING src, CHAR chDst, INT32U nStrLength, INT32U nStartPos);
+Xextern INT32U	 RStrFind(char* src, CHAR chDst, INT32U nStrLength, INT32U nStartPos);
+N
+NR_EXT STRING 	 RHexToStr(BYTE hex, STRING dst);
+Xextern char* 	 RHexToStr(BYTE hex, char* dst);
+NR_EXT STRING 	 RIntToStr(INT32U num, STRING dst);
+Xextern char* 	 RIntToStr(INT32U num, char* dst);
+N
+NR_EXT void 		 RMemset(void *src, INT8U bSetValue, INT32U length);
+Xextern void 		 RMemset(void *src, INT8U bSetValue, INT32U length);
+N
+Nextern int     RMLStrcmp(BYTE *dpDst ,BYTE *dpSour ,INT32U u32length);
+Nextern void    RMLStrcpy(BYTE *dpDst ,BYTE *dpSour ,INT32U u32length);
+N
+Nextern void 	 HexToStr(INT32U Hex, BYTE * Str , INT8U * Length);
+N
+Nextern void 	 ByteToStr(BYTE Src , BYTE * Dst);
+Nextern BYTE * CharToStr(BYTE n);
+Nextern void float_to_string( unsigned char data,  unsigned char *str);
+Nextern BOOLEAN FindDstInArray(BYTE *Src , INT32U SrcLen , BYTE *Dst , INT32U DstLen);
+N
+N#endif
+L 12 "..\Kernel\rstring.c" 2
+N
+N/*--- FUNCTION DESCRIPTOR ------------------------------------------------------
+NFunction : RStrncpy()
+NInput    : 
+NOutput   : 
+NReturn   : 
+NVersion  : 
+NNote     : 
+N------------------------------------------------------------------------------*/
+NSTRING RStrncpy(STRING src, STRING dst, INT32U num)
+Xchar* RStrncpy(char* src, char* dst, INT32U num)
+N{
+N	
+N	STRING src_cpy = src;
+X	char* src_cpy = src;
+N
+N	if ( src == STRING_NULL || dst == STRING_NULL )
+X	if ( src == (char*)(((void *)0)) || dst == (char*)(((void *)0)) )
+N	{	return STRING_NULL; }
+X	{	return (char*)(((void *)0)); }
+N	
+N	while ( num-- )
+N	{
+N		if ( *src == '\0')
+N		{
+N			break;
+N		}
+N
+N		*dst++ = *src++;
+N
+N	}
+N
+N	*dst = '\0';
+N
+N	return src_cpy;	    
+N
+N}
+N
+N
+N/*--- FUNCTION DESCRIPTOR ------------------------------------------------------
+NFunction : RStrncmp()
+NInput    : 
+NOutput   : 
+NReturn   : 
+NVersion  : 
+NNote     : 
+N------------------------------------------------------------------------------*/
+NBOOLEAN RStrncmp(STRING src, STRING dst, INT32U num)
+XBOOLEAN RStrncmp(char* src, char* dst, INT32U num)
+N{
+N
+N	if ( src == STRING_NULL || dst == STRING_NULL )
+X	if ( src == (char*)(((void *)0)) || dst == (char*)(((void *)0)) )
+N	{	
+N		return bFALSE; 
+N	}
+N
+N	while ( num-- )
+N	{
+N		if ( *src == '\0' )
+N		{
+N			return (*dst == '\0') ? bTRUE : bFALSE;
+N		}
+N		if ( *dst++ != *src++ )
+N		{
+N			return bFALSE;
+N		}
+N	}
+N
+N	return bTRUE;
+N
+N}
+N
+N
+N/*--- FUNCTION DESCRIPTOR ------------------------------------------------------
+NFunction : RStrcat()
+NInput    : 
+NOutput   : 
+NReturn   : 
+NVersion  : 
+NNote     : 
+N------------------------------------------------------------------------------*/
+NSTRING	RStrcat(STRING src1_dst, STRING src2)
+Xchar*	RStrcat(char* src1_dst, char* src2)
+N{
+N
+N	STRING src_cpy = src1_dst;
+X	char* src_cpy = src1_dst;
+N
+N	if ( src1_dst == STRING_NULL || src2 == STRING_NULL )
+X	if ( src1_dst == (char*)(((void *)0)) || src2 == (char*)(((void *)0)) )
+N	{
+N		return src1_dst;	
+N	}
+N	while ( *src1_dst != '\0' ) { src1_dst++; }
+N	while ( *src2 != '\0' )
+N	{
+N		*src1_dst++ = *src2++;
+N	}
+N
+N	*src1_dst = '\0';
+N
+N	return 	src_cpy;
+N
+N}
+N
+N
+N/*--- FUNCTION DESCRIPTOR ------------------------------------------------------
+NFunction : RStrFind()
+NInput    : 
+NOutput   : 
+NReturn   : 
+NVersion  : 
+NNote     : 
+N------------------------------------------------------------------------------*/
+NINT32U	RStrFind(STRING src, CHAR chDst, INT32U nStrLength, INT32U nStartPos)
+XINT32U	RStrFind(char* src, CHAR chDst, INT32U nStrLength, INT32U nStartPos)
+N{
+N
+N	INT32U nPos = nStartPos;
+N	INT32U nEndPos = nStrLength - 1;
+N
+N	src = src + nPos;
+N
+N	while ( nPos < nEndPos )
+N	{
+N		if ( *src++ == chDst )
+N		{
+N			return nPos;
+N		}
+N		nPos++;	
+N	}
+N
+N	return STRING_CHAR_NOT_FOUND;	
+X	return (0xFFFFFFFF);	
+N
+N}
+N
+NCHAR HexTable[] = {'0','1','2','3','4','5','6','7','8','9',
+N					'A','B','C','D','E','F'};
+N/*--- FUNCTION DESCRIPTOR ------------------------------------------------------
+NFunction : RHexToStr()
+NInput    : 
+NOutput   : 
+NReturn   : 
+NVersion  : 
+NNote     : 
+N------------------------------------------------------------------------------*/
+NSTRING RHexToStr(BYTE hex, STRING dst)
+Xchar* RHexToStr(BYTE hex, char* dst)
+N{
+N	
+N	STRING src_cpy = dst;
+X	char* src_cpy = dst;
+N
+N	*dst++ = HexTable[hex >> 4];
+N	*dst++ = HexTable[hex & 0x0F];  
+N	*dst = '\0';
+N
+N	return src_cpy;
+N
+N}
+N
+N
+N/*--- FUNCTION DESCRIPTOR ------------------------------------------------------
+NFunction : RIntToStr()
+NInput    : 
+NOutput   : 
+NReturn   : 
+NVersion  : 
+NNote     : 
+N------------------------------------------------------------------------------*/
+NSTRING RIntToStr(INT32U num, STRING dst)
+Xchar* RIntToStr(INT32U num, char* dst)
+N{
+N	
+N	STRING dst_cpy = dst;
+X	char* dst_cpy = dst;
+N	CHAR num_buff[11];
+N	INT8U i = 0;
+N
+N	if ( dst == STRING_NULL )
+X	if ( dst == (char*)(((void *)0)) )
+N	{
+N		return STRING_NULL;
+X		return (char*)(((void *)0));
+N	}
+N
+N	if ( num == 0 )
+N	{
+N		*dst++ = '0';
+N		*dst = '\0';
+N		return dst_cpy;		
+N	}
+N	else
+N	{
+N		while (num)
+N		{
+N			num_buff[i++] = num % 10 + '0';
+N			num /= 10;
+N		}
+N	
+N		while(i--)
+N		{
+N			*dst++ = num_buff[i];
+N		}
+N		
+N		*dst = '\0';
+N	 	
+N		return dst_cpy;	
+N	
+N	}
+N
+N}
+N
+N
+N/*--- FUNCTION DESCRIPTOR ------------------------------------------------------
+NFunction : RMemset()
+NInput    : 
+NOutput   : 
+NReturn   : 
+NVersion  : 
+NNote     : 
+N------------------------------------------------------------------------------*/
+Nvoid RMemset(void *src, INT8U bSetValue, INT32U length)
+N{
+N	INT8U *src_cpy = (INT8U *)src;
+N	while ( length-- )
+N	{
+N		*src_cpy++ = bSetValue;	
+N	}
+N
+N}
+N
+N
+Nint RMLStrcmp(BYTE * dpDst , BYTE * dpSour , INT32U u32length)
+N{
+N	while( u32length-- )
+N	{
+N		if( *dpDst++ != *dpSour++ )
+N		{
+N			return 0;
+N		}
+N	}
+N	return 1;
+N}
+N
+N
+Nvoid RMLStrcpy(BYTE *dpDst , BYTE *dpSour , INT32U u32length)
+N{
+N	while ( u32length-- )
+N	{
+N		*dpDst++ = *dpSour++;
+N	}
+N}
+N
+N
+Nvoid HexToStr(INT32U Hex, BYTE * Str , INT8U * Length)
+N{
+N    INT8U a;
+N	BYTE  Data[10];
+N	INT8U Len = 0;
+N	do{
+N		a = (Hex % 10);
+N		Data[Len++] = a + 0x30;
+N		Hex = Hex / 10;	
+N	}while(Hex != 0);
+N
+N	* Length = Len;
+N	while(Len != 0){
+N		*Str++ = Data[Len-1];
+N		Len--;	
+N	}
+N}
+N
+N
+Nvoid ByteToStr(BYTE Src , BYTE * Dst)
+N{
+N	BYTE Src1;
+N	BYTE Src2;
+N	Src1 = ( Src >> 4 ) & 0x0F;
+N	Src2 = Src & 0x0F;
+N	if( ( Src1 >= 0x0A ) && (Src1 <= 0x0F) ){
+N		*Dst = Src1+0x37;
+N	}else if(( Src1 >= 0x01 ) && (Src1 <= 0x09)){
+N		*Dst = Src1+0x30;
+N	}else{
+N		*Dst = 0x30;
+N	}
+N
+N	Dst++;
+N
+N	if( ( Src2 >= 0x0A ) && (Src2 <= 0x0F) ){
+N		*Dst = Src2+0x37;
+N	}else if(( Src2 >= 0x01 ) && (Src2 <= 0x09)){
+N		*Dst = Src2+0x30;
+N	}else{
+N		*Dst = 0x30;
+N	}
+N}
+N
+N
+NBOOLEAN FindDstInArray(BYTE *Src , INT32U SrcLen , BYTE *Dst , INT32U DstLen)
+N{
+N	INT32U i;
+N	if(SrcLen < DstLen){
+N		return (bFALSE);
+N	}
+N	for( i = 0 ; i < (SrcLen - DstLen + 1) ; i++)
+N	{
+N		if( (RMLStrcmp( (Src+i),Dst,DstLen) ) == 1){
+N			return (bTRUE);
+N		}
+N	}
+N	
+N	return (bFALSE);
+N}
+NBYTE * CharToStr(BYTE num)
+N{                         BYTE * str;
+N                         unsigned char buf[11];
+N                         unsigned char temp,i=0,j=0;
+W "..\Kernel\rstring.c" 316 36 pointless comparison of unsigned integer with zero
+N                          temp=(num<0)?(-num):num;
+N                          while(temp!=0)
+N                          {
+N                               buf[i]=temp+'0';
+N                               temp=temp/10;
+N                               i++;
+N                          }
+N         
+W "..\Kernel\rstring.c" 324 38 pointless comparison of unsigned integer with zero
+N                          while((--i)>=0)
+N                          {
+N                               str[j]=buf[i];
+N                               j++;
+N                          }
+N													 return str;
+N}
+Nvoid float_to_string( unsigned char data,  unsigned char *str)
+N{
+N  int i,j,k;
+N  long temp,tempoten;
+N  unsigned char intpart[20];  // 数的整数部分和小数部分
+N 
+N 
+N  i=0;
+N  tempoten=data/10;
+N  while(tempoten!=0)
+N  {
+N    intpart[i]=temp-10*tempoten+48; //to ascii code
+N    temp=tempoten;
+N    tempoten=temp/10;
+N    i++;
+N  }
+N  intpart[i]=temp+48;
+N  for(k=1;k<=i+1;k++) str[k]=intpart[i+1-k];
+N  str[i+j+3]=0x0D;
+W "..\Kernel\rstring.c" 350 2 last line of file ends without a newline
+N}

@@ -1,0 +1,2047 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+F:\code\2015.12.26\mart\Project\ATC30.uvproj
+Project File Date:  12/27/2015
+
+<h2>Output:</h2>
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(21): error:  #20: identifier "DIO" is undefined
+..\BSP\74hc595.c(23): error:  #20: identifier "SCLK" is undefined
+..\BSP\74hc595.c(69): error:  #20: identifier "RCLK" is undefined
+"..\Outputs\ATC30GG.axf" - 3 Errors, 0 Warning(s).
+Target not created
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.h(5): error:  #20: identifier "sbit" is undefined
+..\BSP\74hc595.h(5): error:  #20: identifier "P1" is undefined
+..\BSP\74hc595.h(6): error:  #20: identifier "sbit" is undefined
+..\BSP\74hc595.h(7): error:  #20: identifier "sbit" is undefined
+"..\Outputs\ATC30GG.axf" - 4 Errors, 0 Warning(s).
+Target not created
+Build target 'ATC30'
+compiling 74hc595.c...
+linking...
+Program Size: Code=12136 RO-data=3952 RW-data=3944 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 0 Warning(s).
+Build target 'ATC30'
+compiling 74hc595.c...
+linking...
+Program Size: Code=12136 RO-data=3952 RW-data=3944 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 0 Warning(s).
+Build target 'ATC30'
+linking...
+Program Size: Code=12136 RO-data=3952 RW-data=3944 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 0 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 74hc595.c...
+linking...
+Program Size: Code=12136 RO-data=3952 RW-data=3944 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 0 Warning(s).
+Build target 'ATC30'
+compiling 74hc595.c...
+linking...
+Program Size: Code=12136 RO-data=3952 RW-data=3944 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 0 Warning(s).
+Build target 'ATC30'
+compiling 74hc595.c...
+compiling main.c...
+linking...
+Program Size: Code=12256 RO-data=3952 RW-data=3944 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 0 Warning(s).
+Build target 'ATC30'
+compiling 74hc595.c...
+linking...
+Program Size: Code=12256 RO-data=3952 RW-data=3944 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 0 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling rtime.c...
+compiling 74hc595.c...
+..\BSP\74hc595.c(89): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+..\App\main.c(20): warning:  #223-D: function "InitHC595" declared implicitly
+linking...
+..\Outputs\ATC30GG.axf: Error: L6218E: Undefined symbol InitHC595 (referred from main.o).
+"..\Outputs\ATC30GG.axf" - 1 Errors, 2 Warning(s).
+Target not created
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(89): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+linking...
+Program Size: Code=12272 RO-data=3952 RW-data=3944 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 1 Warning(s).
+Build target 'ATC30'
+compiling main.c...
+linking...
+Program Size: Code=12664 RO-data=3952 RW-data=3972 ZI-data=8516  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 0 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling main.c...
+..\App\main.c(20): warning:  #223-D: function "InitHC595" declared implicitly
+linking...
+..\Outputs\ATC30GG.axf: Error: L6218E: Undefined symbol InitHC595 (referred from main.o).
+"..\Outputs\ATC30GG.axf" - 1 Errors, 1 Warning(s).
+Target not created
+Build target 'ATC30'
+compiling 74hc595.c...
+compiling main.c...
+linking...
+Program Size: Code=12256 RO-data=3952 RW-data=3944 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 0 Warning(s).
+Build target 'ATC30'
+compiling main.c...
+linking...
+Program Size: Code=12648 RO-data=3952 RW-data=3992 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 0 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(89): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+..\App\main.c(20): warning:  #223-D: function "InitHC595" declared implicitly
+linking...
+..\Outputs\ATC30GG.axf: Error: L6218E: Undefined symbol InitHC595 (referred from main.o).
+"..\Outputs\ATC30GG.axf" - 1 Errors, 2 Warning(s).
+Target not created
+Build target 'ATC30'
+compiling main.c...
+linking...
+Program Size: Code=12660 RO-data=3952 RW-data=3972 ZI-data=8516  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 0 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling main.c...
+linking...
+Program Size: Code=12660 RO-data=3952 RW-data=3972 ZI-data=8516  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 0 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(89): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+linking...
+Program Size: Code=12668 RO-data=3952 RW-data=3972 ZI-data=8516  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 1 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(60): warning:  #223-D: function "Timer_Del" declared implicitly
+..\BSP\74hc595.c(89): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+linking...
+..\Outputs\ATC30GG.axf: Error: L6218E: Undefined symbol Timer_Del (referred from 74hc595.o).
+"..\Outputs\ATC30GG.axf" - 1 Errors, 2 Warning(s).
+Target not created
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(89): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+linking...
+Program Size: Code=12668 RO-data=3952 RW-data=3972 ZI-data=8516  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 1 Warning(s).
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(60): warning:  #223-D: function "DelayUs" declared implicitly
+..\BSP\74hc595.c(89): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+linking...
+..\Outputs\ATC30GG.axf: Error: L6218E: Undefined symbol DelayUs (referred from 74hc595.o).
+"..\Outputs\ATC30GG.axf" - 1 Errors, 2 Warning(s).
+Target not created
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(60): warning:  #223-D: function "DelayUs" declared implicitly
+..\BSP\74hc595.c(89): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+linking...
+..\Outputs\ATC30GG.axf: Error: L6218E: Undefined symbol DelayUs (referred from 74hc595.o).
+"..\Outputs\ATC30GG.axf" - 1 Errors, 2 Warning(s).
+Target not created
+Build target 'ATC30'
+compiling rtime.c...
+compiling rsystem.c...
+compiling uart.c...
+compiling bsp.c...
+compiling systest.c...
+compiling 5110LCD.c...
+compiling tm1638.c...
+compiling stmflash.c...
+compiling key.c...
+compiling 74hc595.c...
+..\BSP\74hc595.c(89): warning:  #1-D: last line of file ends without a newline
+compiling led.c...
+compiling task.c...
+..\App\Task\task.c(702): warning:  #223-D: function "sprintf" declared implicitly
+..\App\Task\task.c(735): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(720): warning:  #177-D: variable "hexBuf" was declared but never referenced
+..\App\Task\task.c(1162): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(1271): warning:  #111-D: statement is unreachable
+compiling voltage.c...
+compiling LCD.c...
+compiling stm32f10x_it.c...
+compiling main.c...
+linking...
+..\Outputs\ATC30GG.axf: Error: L6218E: Undefined symbol DelayUs (referred from 74hc595.o).
+"..\Outputs\ATC30GG.axf" - 1 Errors, 6 Warning(s).
+Target not created
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(61): error:  #65: expected a ";"
+..\BSP\74hc595.c(65): error:  #65: expected a ";"
+..\BSP\74hc595.c(69): error:  #65: expected a ";"
+..\BSP\74hc595.c(73): error:  #65: expected a ";"
+..\BSP\74hc595.c(77): error:  #65: expected a ";"
+..\BSP\74hc595.c(81): error:  #65: expected a ";"
+..\BSP\74hc595.c(85): error:  #65: expected a ";"
+..\BSP\74hc595.c(89): warning:  #1-D: last line of file ends without a newline
+..\BSP\74hc595.c(89): error:  #65: expected a ";"
+compiling main.c...
+"..\Outputs\ATC30GG.axf" - 8 Errors, 1 Warning(s).
+Target not created
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(89): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+linking...
+..\Outputs\ATC30GG.axf: Error: L6218E: Undefined symbol DelayUs (referred from 74hc595.o).
+"..\Outputs\ATC30GG.axf" - 1 Errors, 1 Warning(s).
+Target not created
+Build target 'ATC30'
+compiling rtime.c...
+compiling 74hc595.c...
+..\BSP\74hc595.c(89): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+linking...
+Program Size: Code=12668 RO-data=3952 RW-data=3972 ZI-data=8516  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 1 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(89): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+linking...
+Program Size: Code=12668 RO-data=3952 RW-data=3972 ZI-data=8516  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 1 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(89): warning:  #1-D: last line of file ends without a newline
+compiling task.c...
+..\App\Task\task.c(702): warning:  #223-D: function "sprintf" declared implicitly
+..\App\Task\task.c(735): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(720): warning:  #177-D: variable "hexBuf" was declared but never referenced
+..\App\Task\task.c(1162): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(1271): warning:  #111-D: statement is unreachable
+compiling main.c...
+..\App\main.c(7): error:  #40: expected an identifier
+..\App\main.c(37): error:  #158: expression must be an lvalue or a function designator
+..\App\main.c(37): error:  #18: expected a ")"
+..\App\main.c(40): error:  #158: expression must be an lvalue or a function designator
+..\App\main.c(40): error:  #18: expected a ")"
+"..\Outputs\ATC30GG.axf" - 5 Errors, 6 Warning(s).
+Target not created
+Build target 'ATC30'
+compiling main.c...
+linking...
+Program Size: Code=12688 RO-data=3952 RW-data=3980 ZI-data=8516  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 0 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling main.c...
+linking...
+Program Size: Code=12688 RO-data=3952 RW-data=3980 ZI-data=8516  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 0 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(89): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+linking...
+Program Size: Code=12688 RO-data=3952 RW-data=3980 ZI-data=8516  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 1 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(89): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+linking...
+Program Size: Code=12668 RO-data=3952 RW-data=3980 ZI-data=8516  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 1 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(103): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+linking...
+Program Size: Code=12744 RO-data=3952 RW-data=3980 ZI-data=8516  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 1 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(103): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=12744 RO-data=3952 RW-data=3980 ZI-data=8516  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 1 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling rtime.c...
+compiling 74hc595.c...
+..\BSP\74hc595.c(89): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+linking...
+Program Size: Code=12668 RO-data=3952 RW-data=3980 ZI-data=8516  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 1 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(89): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+linking...
+Program Size: Code=12620 RO-data=3952 RW-data=3980 ZI-data=8516  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 1 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(89): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+linking...
+Program Size: Code=12612 RO-data=3952 RW-data=3980 ZI-data=8516  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 1 Warning(s).
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(89): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+linking...
+Program Size: Code=12612 RO-data=3952 RW-data=3980 ZI-data=8516  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 1 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(89): warning:  #1-D: last line of file ends without a newline
+compiling task.c...
+..\App\Task\task.c(702): warning:  #223-D: function "sprintf" declared implicitly
+..\App\Task\task.c(735): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(720): warning:  #177-D: variable "hexBuf" was declared but never referenced
+..\App\Task\task.c(1162): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(1271): warning:  #111-D: statement is unreachable
+compiling main.c...
+linking...
+Program Size: Code=12572 RO-data=3952 RW-data=3968 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 6 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(98): warning:  #1-D: last line of file ends without a newline
+compiling task.c...
+..\App\Task\task.c(704): warning:  #223-D: function "sprintf" declared implicitly
+..\App\Task\task.c(737): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(722): warning:  #177-D: variable "hexBuf" was declared but never referenced
+..\App\Task\task.c(1164): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(1273): warning:  #111-D: statement is unreachable
+compiling main.c...
+linking...
+Program Size: Code=12312 RO-data=3952 RW-data=3968 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 6 Warning(s).
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(135): warning:  #1-D: last line of file ends without a newline
+compiling task.c...
+..\App\Task\task.c(640): warning:  #223-D: function "SetHCMode" declared implicitly
+..\App\Task\task.c(704): warning:  #223-D: function "sprintf" declared implicitly
+..\App\Task\task.c(737): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(722): warning:  #177-D: variable "hexBuf" was declared but never referenced
+..\App\Task\task.c(1164): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(1273): warning:  #111-D: statement is unreachable
+linking...
+Program Size: Code=12364 RO-data=3952 RW-data=3968 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 7 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling task.c...
+..\App\Task\task.c(640): warning:  #223-D: function "SetHCMode" declared implicitly
+..\App\Task\task.c(704): warning:  #223-D: function "sprintf" declared implicitly
+..\App\Task\task.c(726): warning:  #223-D: function "SetHCMode" declared implicitly
+..\App\Task\task.c(736): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(722): warning:  #177-D: variable "hexBuf" was declared but never referenced
+..\App\Task\task.c(1163): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(1272): warning:  #111-D: statement is unreachable
+linking...
+Program Size: Code=12344 RO-data=3952 RW-data=3968 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 7 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(135): warning:  #1-D: last line of file ends without a newline
+compiling task.c...
+..\App\Task\task.c(640): warning:  #223-D: function "SetHCMode" declared implicitly
+..\App\Task\task.c(704): warning:  #223-D: function "sprintf" declared implicitly
+..\App\Task\task.c(726): warning:  #223-D: function "SetHCMode" declared implicitly
+..\App\Task\task.c(736): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(722): warning:  #177-D: variable "hexBuf" was declared but never referenced
+..\App\Task\task.c(1163): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(1272): warning:  #111-D: statement is unreachable
+linking...
+Program Size: Code=12344 RO-data=3952 RW-data=3968 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 8 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(142): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=12372 RO-data=3952 RW-data=3968 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 1 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(142): warning:  #1-D: last line of file ends without a newline
+compiling task.c...
+..\App\Task\task.c(640): warning:  #223-D: function "SetHCMode" declared implicitly
+..\App\Task\task.c(643): warning:  #223-D: function "etHCMode" declared implicitly
+..\App\Task\task.c(680): warning:  #223-D: function "sprintf" declared implicitly
+..\App\Task\task.c(702): warning:  #223-D: function "SetHCMode" declared implicitly
+..\App\Task\task.c(712): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(698): warning:  #177-D: variable "hexBuf" was declared but never referenced
+..\App\Task\task.c(1139): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(1248): warning:  #111-D: statement is unreachable
+linking...
+..\Outputs\ATC30GG.axf: Error: L6218E: Undefined symbol etHCMode (referred from task.o).
+"..\Outputs\ATC30GG.axf" - 1 Errors, 9 Warning(s).
+Target not created
+Build target 'ATC30'
+compiling task.c...
+..\App\Task\task.c(640): warning:  #223-D: function "SetHCMode" declared implicitly
+..\App\Task\task.c(643): warning:  #223-D: function "setHCMode" declared implicitly
+..\App\Task\task.c(680): warning:  #223-D: function "sprintf" declared implicitly
+..\App\Task\task.c(702): warning:  #223-D: function "SetHCMode" declared implicitly
+..\App\Task\task.c(712): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(698): warning:  #177-D: variable "hexBuf" was declared but never referenced
+..\App\Task\task.c(1139): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(1248): warning:  #111-D: statement is unreachable
+linking...
+..\Outputs\ATC30GG.axf: Error: L6218E: Undefined symbol setHCMode (referred from task.o).
+"..\Outputs\ATC30GG.axf" - 1 Errors, 8 Warning(s).
+Target not created
+Build target 'ATC30'
+compiling task.c...
+..\App\Task\task.c(640): warning:  #223-D: function "SetHCMode" declared implicitly
+..\App\Task\task.c(680): warning:  #223-D: function "sprintf" declared implicitly
+..\App\Task\task.c(702): warning:  #223-D: function "SetHCMode" declared implicitly
+..\App\Task\task.c(712): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(698): warning:  #177-D: variable "hexBuf" was declared but never referenced
+..\App\Task\task.c(1139): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(1248): warning:  #111-D: statement is unreachable
+linking...
+Program Size: Code=12008 RO-data=3952 RW-data=3968 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 7 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(142): warning:  #1-D: last line of file ends without a newline
+compiling task.c...
+..\App\Task\task.c(640): warning:  #223-D: function "SetHCMode" declared implicitly
+..\App\Task\task.c(680): warning:  #223-D: function "sprintf" declared implicitly
+..\App\Task\task.c(702): warning:  #223-D: function "SetHCMode" declared implicitly
+..\App\Task\task.c(712): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(698): warning:  #177-D: variable "hexBuf" was declared but never referenced
+..\App\Task\task.c(1139): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(1248): warning:  #111-D: statement is unreachable
+linking...
+Program Size: Code=12008 RO-data=3952 RW-data=3968 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 8 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(142): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=12008 RO-data=3952 RW-data=3968 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 1 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(142): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=12008 RO-data=3952 RW-data=3968 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 1 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(142): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=12008 RO-data=3952 RW-data=3968 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 1 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(143): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=12008 RO-data=3952 RW-data=3968 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 1 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(143): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=12008 RO-data=3952 RW-data=3976 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 1 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(143): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=12008 RO-data=3952 RW-data=3976 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 1 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(143): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=11996 RO-data=3952 RW-data=3976 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 1 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+compiling task.c...
+..\App\Task\task.c(640): warning:  #223-D: function "SetHCMode" declared implicitly
+..\App\Task\task.c(680): warning:  #223-D: function "sprintf" declared implicitly
+..\App\Task\task.c(702): warning:  #223-D: function "SetHCMode" declared implicitly
+..\App\Task\task.c(711): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(729): warning:  #223-D: function "setMainMode" declared implicitly
+..\App\Task\task.c(698): warning:  #177-D: variable "hexBuf" was declared but never referenced
+..\App\Task\task.c(1136): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(1245): warning:  #111-D: statement is unreachable
+"..\App\Task\task.c" - 0 Errors, 8 Warning(s).
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(167): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=11796 RO-data=2248 RW-data=3976 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 1 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(185): warning:  #1-D: last line of file ends without a newline
+compiling task.c...
+..\App\Task\task.c(640): warning:  #223-D: function "SetHCMode" declared implicitly
+..\App\Task\task.c(680): warning:  #223-D: function "sprintf" declared implicitly
+..\App\Task\task.c(702): warning:  #223-D: function "SetHCMode" declared implicitly
+..\App\Task\task.c(711): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(729): warning:  #223-D: function "setMainMode" declared implicitly
+..\App\Task\task.c(698): warning:  #177-D: variable "hexBuf" was declared but never referenced
+..\App\Task\task.c(878): warning:  #223-D: function "setMainMode" declared implicitly
+..\App\Task\task.c(962): warning:  #223-D: function "setMainMode" declared implicitly
+..\App\Task\task.c(1045): warning:  #223-D: function "setMainMode" declared implicitly
+..\App\Task\task.c(1134): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(1157): warning:  #223-D: function "setMainMode" declared implicitly
+..\App\Task\task.c(1242): warning:  #111-D: statement is unreachable
+linking...
+Program Size: Code=11688 RO-data=2248 RW-data=3976 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 13 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 5110LCD.c...
+compiling 74hc595.c...
+..\BSP\74hc595.c(189): warning:  #1-D: last line of file ends without a newline
+compiling task.c...
+..\App\Task\task.c(640): warning:  #223-D: function "SetHCMode" declared implicitly
+..\App\Task\task.c(680): warning:  #223-D: function "sprintf" declared implicitly
+..\App\Task\task.c(702): warning:  #223-D: function "SetHCMode" declared implicitly
+..\App\Task\task.c(711): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(729): warning:  #223-D: function "setMainMode" declared implicitly
+..\App\Task\task.c(698): warning:  #177-D: variable "hexBuf" was declared but never referenced
+..\App\Task\task.c(868): warning:  #223-D: function "setMainValue" declared implicitly
+..\App\Task\task.c(878): warning:  #223-D: function "setMainMode" declared implicitly
+..\App\Task\task.c(962): warning:  #223-D: function "setMainMode" declared implicitly
+..\App\Task\task.c(1045): warning:  #223-D: function "setMainMode" declared implicitly
+..\App\Task\task.c(1134): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(1157): warning:  #223-D: function "setMainMode" declared implicitly
+..\App\Task\task.c(1242): warning:  #111-D: statement is unreachable
+compiling LCD.c...
+linking...
+Program Size: Code=11792 RO-data=2248 RW-data=3976 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 14 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(189): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=11800 RO-data=2248 RW-data=3976 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 1 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(189): warning:  #1-D: last line of file ends without a newline
+compiling task.c...
+..\App\Task\task.c(640): warning:  #223-D: function "SetHCMode" declared implicitly
+..\App\Task\task.c(680): warning:  #223-D: function "sprintf" declared implicitly
+..\App\Task\task.c(702): warning:  #223-D: function "SetHCMode" declared implicitly
+..\App\Task\task.c(711): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(729): warning:  #223-D: function "setMainMode" declared implicitly
+..\App\Task\task.c(698): warning:  #177-D: variable "hexBuf" was declared but never referenced
+..\App\Task\task.c(868): warning:  #223-D: function "setMainValue" declared implicitly
+..\App\Task\task.c(878): warning:  #223-D: function "setMainMode" declared implicitly
+..\App\Task\task.c(913): warning:  #223-D: function "setMainValue" declared implicitly
+..\App\Task\task.c(928): warning:  #223-D: function "setMainValue" declared implicitly
+..\App\Task\task.c(962): warning:  #223-D: function "setMainMode" declared implicitly
+..\App\Task\task.c(997): warning:  #223-D: function "setMainValue" declared implicitly
+..\App\Task\task.c(1012): warning:  #223-D: function "setMainValue" declared implicitly
+..\App\Task\task.c(1045): warning:  #223-D: function "setMainMode" declared implicitly
+..\App\Task\task.c(1081): warning:  #223-D: function "setMainValue" declared implicitly
+..\App\Task\task.c(1096): warning:  #223-D: function "setMainValue" declared implicitly
+..\App\Task\task.c(1134): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(1157): warning:  #223-D: function "setMainMode" declared implicitly
+..\App\Task\task.c(1242): warning:  #111-D: statement is unreachable
+linking...
+Program Size: Code=11776 RO-data=2248 RW-data=3976 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 20 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling task.c...
+..\App\Task\task.c(131): warning:  #69-D: integer conversion resulted in truncation
+..\App\Task\task.c(132): warning:  #69-D: integer conversion resulted in truncation
+..\App\Task\task.c(657): warning:  #223-D: function "SetHCMode" declared implicitly
+..\App\Task\task.c(697): warning:  #223-D: function "sprintf" declared implicitly
+..\App\Task\task.c(719): warning:  #223-D: function "SetHCMode" declared implicitly
+..\App\Task\task.c(728): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(746): warning:  #223-D: function "setMainMode" declared implicitly
+..\App\Task\task.c(715): warning:  #177-D: variable "hexBuf" was declared but never referenced
+..\App\Task\task.c(885): warning:  #223-D: function "setMainValue" declared implicitly
+..\App\Task\task.c(895): warning:  #223-D: function "setMainMode" declared implicitly
+..\App\Task\task.c(930): warning:  #223-D: function "setMainValue" declared implicitly
+..\App\Task\task.c(945): warning:  #223-D: function "setMainValue" declared implicitly
+..\App\Task\task.c(979): warning:  #223-D: function "setMainMode" declared implicitly
+..\App\Task\task.c(1013): warning:  #223-D: function "setMainValue" declared implicitly
+..\App\Task\task.c(1028): warning:  #223-D: function "setMainValue" declared implicitly
+..\App\Task\task.c(1061): warning:  #223-D: function "setMainMode" declared implicitly
+..\App\Task\task.c(1098): warning:  #223-D: function "setMainValue" declared implicitly
+..\App\Task\task.c(1113): warning:  #223-D: function "setMainValue" declared implicitly
+..\App\Task\task.c(1151): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(1174): warning:  #223-D: function "setMainMode" declared implicitly
+..\App\Task\task.c(1259): warning:  #111-D: statement is unreachable
+linking...
+Program Size: Code=11824 RO-data=2248 RW-data=3992 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 21 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+compiling 74hc595.c...
+..\BSP\74hc595.c(223): warning:  #1-D: last line of file ends without a newline
+compiling task.c...
+..\App\Task\task.c(131): warning:  #69-D: integer conversion resulted in truncation
+..\App\Task\task.c(132): warning:  #69-D: integer conversion resulted in truncation
+..\App\Task\task.c(657): warning:  #223-D: function "SetHCMode" declared implicitly
+..\App\Task\task.c(697): warning:  #223-D: function "sprintf" declared implicitly
+..\App\Task\task.c(719): warning:  #223-D: function "SetHCMode" declared implicitly
+..\App\Task\task.c(728): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(746): warning:  #223-D: function "setMainMode" declared implicitly
+..\App\Task\task.c(715): warning:  #177-D: variable "hexBuf" was declared but never referenced
+..\App\Task\task.c(800): warning:  #223-D: function "setOpenclose" declared implicitly
+..\App\Task\task.c(818): warning:  #223-D: function "setOpenclose" declared implicitly
+..\App\Task\task.c(836): warning:  #223-D: function "setOpenclose" declared implicitly
+..\App\Task\task.c(852): warning:  #223-D: function "setOpenclose" declared implicitly
+..\App\Task\task.c(885): warning:  #223-D: function "setMainValue" declared implicitly
+..\App\Task\task.c(895): warning:  #223-D: function "setMainMode" declared implicitly
+..\App\Task\task.c(930): warning:  #223-D: function "setMainValue" declared implicitly
+..\App\Task\task.c(945): warning:  #223-D: function "setMainValue" declared implicitly
+..\App\Task\task.c(953): warning:  #223-D: function "setOpenclose" declared implicitly
+..\App\Task\task.c(968): warning:  #223-D: function "setOpenclose" declared implicitly
+..\App\Task\task.c(980): warning:  #223-D: function "setMainMode" declared implicitly
+..\App\Task\task.c(1014): warning:  #223-D: function "setMainValue" declared implicitly
+..\App\Task\task.c(1029): warning:  #223-D: function "setMainValue" declared implicitly
+..\App\Task\task.c(1038): warning:  #223-D: function "setOpenclose" declared implicitly
+..\App\Task\task.c(1053): warning:  #223-D: function "setOpenclose" declared implicitly
+..\App\Task\task.c(1064): warning:  #223-D: function "setMainMode" declared implicitly
+..\App\Task\task.c(1101): warning:  #223-D: function "setMainValue" declared implicitly
+..\App\Task\task.c(1116): warning:  #223-D: function "setMainValue" declared implicitly
+..\App\Task\task.c(1124): warning:  #223-D: function "setOpenclose" declared implicitly
+..\App\Task\task.c(1140): warning:  #223-D: function "setOpenclose" declared implicitly
+..\App\Task\task.c(1156): warning:  #223-D: function "SysTest_Putstr1" declared implicitly
+..\App\Task\task.c(1179): warning:  #223-D: function "setMainMode" declared implicitly
+..\App\Task\task.c(1264): warning:  #111-D: statement is unreachable
+linking...
+Program Size: Code=12152 RO-data=2248 RW-data=3992 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 32 Warning(s).
+Load "..\\Outputs\\ATC30GG.axf" 
+Set JLink Project File to "F:\code\2015.12.26\mart\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78a, compiled Oct  8 2013 13:10:24
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.313V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'ATC30'
+linking...
+Program Size: Code=12152 RO-data=2248 RW-data=3992 ZI-data=8520  
+After Build - User command #1: C:\Keil\ARM\ARMCC\bin\fromelf.exe --bin -o ..\ATC30GG.bin ..\Outputs\ATC30GG.axf
+"..\Outputs\ATC30GG.axf" - 0 Errors, 0 Warning(s).

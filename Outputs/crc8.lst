@@ -1,0 +1,175 @@
+L 1 "..\App\LKClient\crc8.c"
+N/*
+N   <copyright file="crc8.c" company="LinkAge"> 
+N   Copyright (c) LinkAge.All rights reserved. 
+N   </copyright> 
+N   <author>杨大卫</author>
+N   <date> 2012-04-16 </date>
+N   <summary>
+N	本代码主要实现功能:
+N	1.8位CRC校验，有查表法和计算法
+N   </summary>
+N*/
+N/* <modify>
+N      修改人：××
+N      修改时间：yyyy-mm-dd
+N      修改描述：×××
+N      版本：1.0
+N </modify>*/
+N
+N#include "crc8.h"
+L 1 "..\App\LKClient\crc8.h" 1
+N#ifndef __CRC8_H
+N#define __CRC8_H
+N
+N#include "stdtype.h"
+L 1 "..\Kernel\stdtype.h" 1
+N/*--- HEADER FILE DESCRIPTOR --------------------------------------------------
+NProject : Realtime Micro Library
+NFile    : stdtype.h
+NAuthor  : automatic.dai
+NE-mail  : automatic.dai@gmail.com
+NData    : 2013/01/16
+NVersion : V1.0(alpha)
+NNote    : 
+N-----------------------------------------------------------------------------*/
+N
+N#ifndef __STDTYPE_H_
+N#define __STDTYPE_H_
+N
+N/*--- Header Includes -------------------------------------------------------*/
+N
+N/*--- Macro Defination ------------------------------------------------------*/
+N/* Bit Manipulate */
+N#define BIT_SET(byte,bit)			( (byte) |=  (1<<(bit)) )
+N#define BIT_CLR(byte,bit)			( (byte) &= ~(1<<(bit)) )
+N#define BIT_CPL(byte,bit)			( (byte) ^=  (1<<(bit)) )
+N#define BIT_GET(byte,bit)			( (byte) &   (1<<(bit)) )
+N
+N#define BIT_0						(0x01)
+N#define BIT_1						(0x02)
+N#define BIT_2						(0x04)
+N#define BIT_3						(0x08)
+N#define BIT_4						(0x10)
+N#define BIT_5						(0x20)
+N#define BIT_6						(0x40)
+N#define BIT_7						(0x80)
+N
+N/* NULL Pointer */
+N#define	R_NULL						((void *)0)
+N
+N/* Attributes */
+N#define R_IO						volatile
+N#define R_I							volatile const
+N#define R_O							volatile
+N
+N#define R_EXT						extern
+N#define R_STATIC					static
+N
+N#define R_COUNTER_TYPE				0x01
+N#define R_TIMER_TYPE				0x02
+N#define ISTYPE(x,y)					(x->type == y)
+N		
+N/*--- Data Struct Defination ------------------------------------------------*/
+N/* signed */
+Ntypedef  signed char				CHAR;
+Ntypedef  signed char				INT8S;
+Ntypedef  signed short int			INT16S;
+Ntypedef  signed int					INT32S;
+Ntypedef  signed long long int		INT64S;
+N
+N/* unsigned */
+Ntypedef  unsigned char				BYTE;
+Ntypedef  unsigned char				UCHAR;
+Ntypedef  unsigned char				INT8U;
+Ntypedef  unsigned short int			INT16U;
+Ntypedef  unsigned int				INT32U;
+Ntypedef  unsigned long long int 	INT64U;
+N
+N/* float */
+Ntypedef  float						FLOAT32;
+Ntypedef  double						FLOAT64;
+N
+N/* boolean */
+Ntypedef  enum _BOOLEAN
+N{
+N	bFALSE = 0,
+N	bTRUE  = 1
+N}BOOLEAN;
+N
+N/* function pointer */
+Ntypedef void 						(*CALLBACK)(INT32U param);
+N
+N/* mem address */
+Ntypedef R_IO INT32U 				*MEMADDR;
+Xtypedef volatile INT32U 				*MEMADDR;
+N
+N/*--- Variables Export ------------------------------------------------------*/
+N
+N/*--- Function Declaration --------------------------------------------------*/
+N
+N#endif
+L 5 "..\App\LKClient\crc8.h" 2
+N
+Nextern BYTE Calculate_CRC(BYTE *cpData, INT32U u32Counter);
+N
+N#endif
+L 20 "..\App\LKClient\crc8.c" 2
+N
+Nconst char CRC8Table[]={
+N  0, 94, 188, 226, 97, 63, 221, 131, 194, 156, 126, 32, 163, 253, 31, 65,
+N  157, 195, 33, 127, 252, 162, 64, 30, 95, 1, 227, 189, 62, 96, 130, 220,
+N  35, 125, 159, 193, 66, 28, 254, 160, 225, 191, 93, 3, 128, 222, 60, 98,
+N  190, 224, 2, 92, 223, 129, 99, 61, 124, 34, 192, 158, 29, 67, 161, 255,
+N  70, 24, 250, 164, 39, 121, 155, 197, 132, 218, 56, 102, 229, 187, 89, 7,
+N  219, 133, 103, 57, 186, 228, 6, 88, 25, 71, 165, 251, 120, 38, 196, 154,
+N  101, 59, 217, 135, 4, 90, 184, 230, 167, 249, 27, 69, 198, 152, 122, 36,
+N  248, 166, 68, 26, 153, 199, 37, 123, 58, 100, 134, 216, 91, 5, 231, 185,
+N  140, 210, 48, 110, 237, 179, 81, 15, 78, 16, 242, 172, 47, 113, 147, 205,
+N  17, 79, 173, 243, 112, 46, 204, 146, 211, 141, 111, 49, 178, 236, 14, 80,
+N  175, 241, 19, 77, 206, 144, 114, 44, 109, 51, 209, 143, 12, 82, 176, 238,
+N  50, 108, 142, 208, 83, 13, 239, 177, 240, 174, 76, 18, 145, 207, 45, 115,
+N  202, 148, 118, 40, 171, 245, 23, 73, 8, 86, 180, 234, 105, 55, 213, 139,
+N  87, 9, 235, 181, 54, 104, 138, 212, 149, 203, 41, 119, 244, 170, 72, 22,
+N  233, 183, 85, 11, 136, 214, 52, 106, 43, 117, 151, 201, 74, 20, 246, 168,
+N  116, 42, 200, 150, 21, 75, 169, 247, 182, 232, 10, 84, 215, 137, 107, 53
+N};
+N
+N/*******************************************************************************
+N* Function Name  : Calculate_CRC
+N* Description    : 计算一串数据的CRC校验值
+N* Input          : *cpData,要计算的数据地址
+N				   u32Counter，要计算的数据长度
+N* Output         : 计算出的CRC校验值
+N*******************************************************************************/
+NBYTE Calculate_CRC(BYTE *cpData, INT32U u32Counter)
+N{
+N    BYTE u8Crc8 = 0;
+N
+N    for( ; u32Counter > 0; u32Counter--){
+N        u8Crc8 = CRC8Table[u8Crc8 ^ *cpData];
+N        cpData++;
+N    }
+N    return(u8Crc8);
+N}
+N
+N/*
+Nuint8 crc8(uint8 u8Reg,uint8 u8Data)
+N{
+N	uint8 msb;
+N	uint8 polynomial = 0x31;
+N	uint8 i = 0;
+N
+N	u8Reg = u8Reg ^ u8Data;
+N
+N	do{
+N		msb = u8Reg & 0x80;
+N		u8Reg = u8Reg << 1;
+N		if(msb == 0x80){
+N			u8Reg = u8Reg ^ polynomial;
+N		}
+N		i++;
+N	}while(i < 8);
+N	return(u8Reg);
+N}
+N*/

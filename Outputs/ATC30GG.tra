@@ -1,0 +1,55 @@
+*** Creating Trace Output File '..\Outputs\ATC30GG.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"..\outputs\startup_stm32f10x_hd.o"'
+### List of Objects: adding '"..\outputs\core_cm3.o"'
+### List of Objects: adding '"..\outputs\system_stm32f10x.o"'
+### List of Objects: adding '"..\outputs\misc.o"'
+### List of Objects: adding '"..\outputs\stm32f10x_gpio.o"'
+### List of Objects: adding '"..\outputs\stm32f10x_iwdg.o"'
+### List of Objects: adding '"..\outputs\stm32f10x_rcc.o"'
+### List of Objects: adding '"..\outputs\stm32f10x_usart.o"'
+### List of Objects: adding '"..\outputs\stm32f10x_tim.o"'
+### List of Objects: adding '"..\outputs\stm32f10x_flash.o"'
+### List of Objects: adding '"..\outputs\stm32f10x_pwr.o"'
+### List of Objects: adding '"..\outputs\stm32f10x_adc.o"'
+### List of Objects: adding '"..\outputs\stm32f10x_rtc.o"'
+### List of Objects: adding '"..\outputs\stm32f10x_bkp.o"'
+### List of Objects: adding '"..\outputs\rdelay.o"'
+### List of Objects: adding '"..\outputs\rtime.o"'
+### List of Objects: adding '"..\outputs\rstring.o"'
+### List of Objects: adding '"..\outputs\rsystem.o"'
+### List of Objects: adding '"..\outputs\uart.o"'
+### List of Objects: adding '"..\outputs\nvic.o"'
+### List of Objects: adding '"..\outputs\bsp.o"'
+### List of Objects: adding '"..\outputs\systest.o"'
+### List of Objects: adding '"..\outputs\5110lcd.o"'
+### List of Objects: adding '"..\outputs\tm1638.o"'
+### List of Objects: adding '"..\outputs\stmflash.o"'
+### List of Objects: adding '"..\outputs\key.o"'
+### List of Objects: adding '"..\outputs\74hc595.o"'
+### List of Objects: adding '"..\outputs\remote.o"'
+### List of Objects: adding '"..\outputs\iwdg.o"'
+### List of Objects: adding '"..\outputs\led.o"'
+### List of Objects: adding '"..\outputs\adc.o"'
+### List of Objects: adding '"..\outputs\task.o"'
+### List of Objects: adding '"..\outputs\voltage.o"'
+### List of Objects: adding '"..\outputs\lcd.o"'
+### List of Objects: adding '"..\outputs\stm32f10x_it.o"'
+### List of Objects: adding '"..\outputs\main.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 "..\outputs\startup_stm32f10x_hd.o" "..\outputs\core_cm3.o" "..\outputs\system_stm32f10x.o" "..\outputs\misc.o" "..\outputs\stm32f10x_gpio.o" "..\outputs\stm32f10x_iwdg.o" "..\outputs\stm32f10x_rcc.o" "..\outputs\stm32f10x_usart.o" "..\outputs\stm32f10x_tim.o" "..\outputs\stm32f10x_flash.o" "..\outputs\stm32f10x_pwr.o" "..\outputs\stm32f10x_adc.o" "..\outputs\stm32f10x_rtc.o" "..\outputs\stm32f10x_bkp.o" "..\outputs\rdelay.o" "..\outputs\rtime.o" "..\outputs\rstring.o" "..\outputs\rsystem.o" "..\outputs\uart.o" "..\outputs\nvic.o" "..\outputs\bsp.o" "..\outputs\systest.o" "..\outputs\5110lcd.o" "..\outputs\tm1638.o" "..\outputs\stmflash.o" "..\outputs\key.o" "..\outputs\74hc595.o" "..\outputs\remote.o" "..\outputs\iwdg.o" "..\outputs\led.o" "..\outputs\adc.o" "..\outputs\task.o" "..\outputs\voltage.o" "..\outputs\lcd.o" "..\outputs\stm32f10x_it.o" "..\outputs\main.o" 
+--library_type=microlib --strict --scatter "..\Outputs\ATC30GG.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list "..\Outputs\ATC30GG.map" -o ..\Outputs\ATC30GG.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '..\Outputs\ATC30GG.axf'
+### ADS-LD Command File: '..\Outputs\ATC30GG.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '..\Outputs\ATC30GG.lnp', Handle=0x000005F4
+### Writing '.lnp' file
+### ADS-LD Command file '..\Outputs\ATC30GG.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

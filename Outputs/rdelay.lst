@@ -1,0 +1,178 @@
+L 1 "..\Kernel\rdelay.c"
+N
+N/* C语言及嵌入式开发相关常用函数，如系统阻塞延时函数
+N                                    字符串拷贝函数
+N									字符串比较函数*/
+N
+N#include "stdtype.h"
+L 1 "..\Kernel\stdtype.h" 1
+N/*--- HEADER FILE DESCRIPTOR --------------------------------------------------
+NProject : Realtime Micro Library
+NFile    : stdtype.h
+NAuthor  : automatic.dai
+NE-mail  : automatic.dai@gmail.com
+NData    : 2013/01/16
+NVersion : V1.0(alpha)
+NNote    : 
+N-----------------------------------------------------------------------------*/
+N
+N#ifndef __STDTYPE_H_
+N#define __STDTYPE_H_
+N
+N/*--- Header Includes -------------------------------------------------------*/
+N
+N/*--- Macro Defination ------------------------------------------------------*/
+N/* Bit Manipulate */
+N#define BIT_SET(byte,bit)			( (byte) |=  (1<<(bit)) )
+N#define BIT_CLR(byte,bit)			( (byte) &= ~(1<<(bit)) )
+N#define BIT_CPL(byte,bit)			( (byte) ^=  (1<<(bit)) )
+N#define BIT_GET(byte,bit)			( (byte) &   (1<<(bit)) )
+N
+N#define BIT_0						(0x01)
+N#define BIT_1						(0x02)
+N#define BIT_2						(0x04)
+N#define BIT_3						(0x08)
+N#define BIT_4						(0x10)
+N#define BIT_5						(0x20)
+N#define BIT_6						(0x40)
+N#define BIT_7						(0x80)
+N
+N/* NULL Pointer */
+N#define	R_NULL						((void *)0)
+N
+N/* Attributes */
+N#define R_IO						volatile
+N#define R_I							volatile const
+N#define R_O							volatile
+N
+N#define R_EXT						extern
+N#define R_STATIC					static
+N
+N#define R_COUNTER_TYPE				0x01
+N#define R_TIMER_TYPE				0x02
+N#define ISTYPE(x,y)					(x->type == y)
+N		
+N/*--- Data Struct Defination ------------------------------------------------*/
+N/* signed */
+Ntypedef  signed char				CHAR;
+Ntypedef  signed char				INT8S;
+Ntypedef  signed short int			INT16S;
+Ntypedef  signed int					INT32S;
+Ntypedef  signed long long int		INT64S;
+N
+N/* unsigned */
+Ntypedef  unsigned char				BYTE;
+Ntypedef  unsigned char				UCHAR;
+Ntypedef  unsigned char				uchar;
+Ntypedef  unsigned char				INT8U;
+Ntypedef  unsigned short int			INT16U;
+Ntypedef  unsigned int				INT32U;
+Ntypedef  unsigned long long int 	INT64U;
+N
+N
+N#define RCCA			    (RCC_APB2Periph_GPIOA)
+N#define RCCB			    (RCC_APB2Periph_GPIOB)
+N#define RCCC			    (RCC_APB2Periph_GPIOC)
+N#define RCCD			    (RCC_APB2Periph_GPIOD)
+N#define RCCE			    (RCC_APB2Periph_GPIOE)
+N#define RCCF			    (RCC_APB2Periph_GPIOF)
+N#define PORTA		      (GPIOA)
+N#define PORTB		      (GPIOB)
+N#define PORTC		      (GPIOC)
+N#define PORTD		      (GPIOD)
+N#define PORTE		      (GPIOE)
+N#define PORTF		      (GPIOF)
+N#define PIN0			    (GPIO_Pin_0)
+N#define PIN1			    (GPIO_Pin_1)
+N#define PIN2			    (GPIO_Pin_2)
+N#define PIN3			    (GPIO_Pin_3)
+N#define PIN4			    (GPIO_Pin_4)
+N#define PIN5			    (GPIO_Pin_5)
+N#define PIN6			    (GPIO_Pin_6)
+N#define PIN7			    (GPIO_Pin_7)
+N 
+N
+N
+N
+N/* float */
+Ntypedef  float						FLOAT32;
+Ntypedef  double						FLOAT64;
+N
+N/* boolean */
+Ntypedef  enum _BOOLEAN
+N{
+N	bFALSE = 0,
+N	bTRUE  = 1
+N}BOOLEAN;
+N
+N/* function pointer */
+Ntypedef void 						(*CALLBACK)(INT32U param);
+N
+N/* mem address */
+Ntypedef R_IO INT32U 				*MEMADDR;
+Xtypedef volatile INT32U 				*MEMADDR;
+N
+N/*--- Variables Export ------------------------------------------------------*/
+N
+N/*--- Function Declaration --------------------------------------------------*/
+N#define SYSTEM_SUPPORT_OS		0		// 
+N																	    
+N	 
+N 
+N#define BITBAND(addr, bitnum) ((addr & 0xF0000000)+0x2000000+((addr &0xFFFFF)<<5)+(bitnum<<2)) 
+N#define MEM_ADDR(addr)  *((volatile unsigned long  *)(addr)) 
+N#define BIT_ADDR(addr, bitnum)   MEM_ADDR(BITBAND(addr, bitnum)) 
+N//IO?úμ??·ó3é?
+N#define GPIOA_ODR_Addr    (GPIOA_BASE+12) //0x4001080C 
+N#define GPIOB_ODR_Addr    (GPIOB_BASE+12) //0x40010C0C 
+N#define GPIOC_ODR_Addr    (GPIOC_BASE+12) //0x4001100C 
+N#define GPIOD_ODR_Addr    (GPIOD_BASE+12) //0x4001140C 
+N#define GPIOE_ODR_Addr    (GPIOE_BASE+12) //0x4001180C 
+N#define GPIOF_ODR_Addr    (GPIOF_BASE+12) //0x40011A0C    
+N#define GPIOG_ODR_Addr    (GPIOG_BASE+12) //0x40011E0C    
+N
+N#define GPIOA_IDR_Addr    (GPIOA_BASE+8) //0x40010808 
+N#define GPIOB_IDR_Addr    (GPIOB_BASE+8) //0x40010C08 
+N#define GPIOC_IDR_Addr    (GPIOC_BASE+8) //0x40011008 
+N#define GPIOD_IDR_Addr    (GPIOD_BASE+8) //0x40011408 
+N#define GPIOE_IDR_Addr    (GPIOE_BASE+8) //0x40011808 
+N#define GPIOF_IDR_Addr    (GPIOF_BASE+8) //0x40011A08 
+N#define GPIOG_IDR_Addr    (GPIOG_BASE+8) //0x40011E08 
+N 
+N//IO?ú2ù×÷,????μ￥ò?μ?IO?ú!
+N//è·±￡nμ??μD?óú16!
+N#define PAout(n)   BIT_ADDR(GPIOA_ODR_Addr,n)  //ê?3? 
+N#define PAin(n)    BIT_ADDR(GPIOA_IDR_Addr,n)  //ê?è? 
+N
+N#define PBout(n)   BIT_ADDR(GPIOB_ODR_Addr,n)  //ê?3? 
+N#define PBin(n)    BIT_ADDR(GPIOB_IDR_Addr,n)  //ê?è? 
+N
+N#define PCout(n)   BIT_ADDR(GPIOC_ODR_Addr,n)  //ê?3? 
+N#define PCin(n)    BIT_ADDR(GPIOC_IDR_Addr,n)  //ê?è? 
+N
+N#define PDout(n)   BIT_ADDR(GPIOD_ODR_Addr,n)  //ê?3? 
+N#define PDin(n)    BIT_ADDR(GPIOD_IDR_Addr,n)  //ê?è? 
+N
+N#define PEout(n)   BIT_ADDR(GPIOE_ODR_Addr,n)  //ê?3? 
+N#define PEin(n)    BIT_ADDR(GPIOE_IDR_Addr,n)  //ê?è?
+N
+N#define PFout(n)   BIT_ADDR(GPIOF_ODR_Addr,n)  //ê?3? 
+N#define PFin(n)    BIT_ADDR(GPIOF_IDR_Addr,n)  //ê?è?
+N
+N#define PGout(n)   BIT_ADDR(GPIOG_ODR_Addr,n)  //ê?3? 
+N#define PGin(n)    BIT_ADDR(GPIOG_IDR_Addr,n)  //ê?è?
+N#endif
+L 7 "..\Kernel\rdelay.c" 2
+N
+N/* Functions:   HXZ_SoftDelay()
+N   Description: 普通延时函数,40000000约等于2秒 
+N                             20000000约为1秒
+N							 2000000约为100ms
+N							 200000约为10ms
+N							 20000约为1ms         
+N							 10000约为0.5ms */
+Nvoid HXZ_SoftDelay(INT32U u32Count)				  
+N{
+N	while ( u32Count-- );
+N}
+N
